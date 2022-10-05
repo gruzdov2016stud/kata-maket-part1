@@ -9,7 +9,6 @@ html{
     /*outline: solid 1px red;*/
 }
 body{
-    box-sizing: inherit;
     font-family: "TT Lakes Regular";
     font-weight: 400;
     margin: 0;
@@ -28,13 +27,22 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
+
 li{
     list-style-type: none;
 }
 
-.container-list__left, .header-inner__right{
+.container-list__left{
+    min-height: 87px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+}
+.header-inner__right{
     min-height: 87px;
     display: flex;
     justify-content: space-between;
@@ -50,7 +58,13 @@ li{
 .container-list__item {
     width: 40px;
     height: 40px;
+
     border-radius: 20px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--menu__btn-color);
     border: none;
 }
@@ -59,7 +73,6 @@ li{
     justify-content: center;
     align-items: center;
     margin-right: 17px;
-    margin-left: 16px;
 }
 
 .body__divider::before {
@@ -84,23 +97,9 @@ li{
     margin-right: 16px;
 }
 
-.container-list__item_2 {
+.container-list__item_2,.container-list__item_3, .container-list__item_4 {
     margin-right: 16px;
     display: none;
-}
-
-.container-list__item_3{
-    margin-right: 16px;
-    display: none;
-}
-.container-list__item_4{
-    display: none;
-}
-.container-list__item_5, .container-list__item_6{
-    margin-right: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /*Переход от header к main */
@@ -122,15 +121,16 @@ li{
     align-content: center;
 }
 .main-title__article-left{
-    display: flex;
+    display: inherit;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 .main-title__article-right{
-    display: flex;
+    display: inherit;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 .body__divider_2 {
@@ -241,13 +241,8 @@ p{
         justify-content: center;
         align-items: center;
     }
-    .body__divider_1 {
-        margin-left: 20px;
-    }
     .container-list__item_4{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inherit;
     }
     .main-title {
         margin-bottom: 32px;
@@ -296,6 +291,9 @@ p{
     }
     .body__divider_none, .article-text__text_none-3, .navigation__btn_none {
         display: inherit;
+    }
+    .header-inner__right{
+        padding-left: 16px;
     }
     .main{
         padding-top: 42px;
