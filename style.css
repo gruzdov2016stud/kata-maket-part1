@@ -323,6 +323,7 @@ p{
     p{
         margin: 0;
         padding: 0;
+        margin-bottom: 18px;
     }
     .main-title__article-right{
         display: flex;
