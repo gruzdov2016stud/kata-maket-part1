@@ -178,7 +178,7 @@ li{
     border: none;
     height: 30px;
     background-color: var(--header-color);
-    color: var(--nav__main-text--color);
+    color: var(--main-text--color);
 }
 .navigation__btn:hover{
     border: 2px solid var(--nav__main--border-color);
@@ -195,15 +195,17 @@ li{
     margin-left: 16px;
     margin-bottom: 27.5px;
 }
-p{
-    margin-top: 0px;
-    margin-bottom: 16px;
-}
 .article-text__text_none-1{
+    margin-top: 0px;
 }
 
-.main-title__right-none, .article-text__text_none-2, .article-text__text_none-3{
+.main-title__right-none, .article-text__text_none-2{
     display: none;
+}
+.article-text__text_none-3{
+    display: none;
+    margin-top: 0px;
+    margin-bottom: 16px;
 }
 
 .article__read-more-btn {
@@ -320,9 +322,8 @@ p{
     .main-title__none{
         display: inherit;
     }
-    p{
-        margin: 0;
-        padding: 0;
+    .article-text__text_none-3{
+        margin-bottom: 18px;
     }
     .main-title__article-right{
         display: flex;

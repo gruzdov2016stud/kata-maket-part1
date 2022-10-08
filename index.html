@@ -4,118 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style-menu.css">
 </head>
 <body>
-<header class="header">
-    <nav class="container">
-        <ul class="container-list__left">
-            <li class="container-list__item container-list__item_1">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\07.svg" alt="Burger">
-                </a>
-            </li>
-            <li class="body__divider body__divider_1 body__divider_none"></li>
-            <li>
-                <a href="#" class="container-list__link">
-                    <img class="header-inner__img" src="assets\img\content\logo.svg" alt="logo">
-                </a>
-            </li>
-        </ul>
-        <ul class="header-inner__right">
-            <li class="container-list__item container-list__item_2">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\06.svg" alt="Call">
-                </a>
-            </li>
-            <li class="container-list__item container-list__item_3">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\05.svg" alt="Chat">
-                </a>
-            </li>
-            <li class="container-list__item container-list__item_4">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\04.svg" alt="Profile">
-                </a>
-            </li>
-            <li>
-                <div class="body__divider body__divider_1"></div>
-            </li>
-            <li class="container-list__item container-list__item_5">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\02.svg" alt="Repair">
-                </a>
-            </li>
-            <li class="container-list__item container-list__item_6">
-                <a href="#" class="container-list__link">
-                    <img src="assets\img\icon\03.svg" alt="Check Status">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<hr class="shadow">
-<main class="main">
-    <section class="main-title">
-        <article class="main-title__article-left">
-            <div class="body__divider body__divider_2"></div>
-            <h1 class="main-title__title">Услуги и сервисы</h1>
-        </article>
-        <article>
-            <ul class="main-title__article-right main-title__right-none">
-                <p>Оставить заявку</p>
-                <li class="container-list__item container-list__item_5">
-                    <a href="#" class="container-list__link">
-                        <img src="assets\img\icon\02.svg" alt="Repair">
-                    </a>
-                </li>
-                <p>Статус ремонта</p>
-                <li class="container-list__item container-list__item_6">
-                    <a href="#" class="container-list__link">
-                        <img src="assets\img\icon\03.svg" alt="Check Status">
-                    </a>
-                </li>
+<section class="container-menu">
+    <nav class="menu">
+        <header class="menu__header">
+            <ul class="header-list">
+                <li class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/burger-before.svg" alt="burger-before"></button ></li>
+                <li class="header-list__item"><a  href="#" class="logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></li>
+                <li class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/search.svg" alt="search"></button ></li>
             </ul>
-        </article>
-    </section>
-    <section class="main-section">
-        <nav class="main-section__navigation">
-            <button class="navigation__btn">Ремонтируемые бренды</button>
-            <button class="navigation__btn">Ремонтируемые устройства</button>
-            <button class="navigation__btn ">Цены на услуги</button>
-            <button class="navigation__btn ">Ремонтируемые устройства</button>
-            <button class="navigation__btn ">Цены на услуги</button>
-            <button class="navigation__btn ">Адреса сервисных центров</button>
-            <button class="navigation__btn ">Специальные цены</button>
-            <button class="navigation__btn last-item">Отзывы</button>
-        </nav>
-        <div class="section-container">
-            <article class="article-text">
-                <p class="article-text__text_none-1">
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                </p>
-                <p class="article-text__text_none-2">
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>
+        </header>
+        <section class="section-menu">
+            <ul class="menu__list">
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Ремонт техники</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Услуги и сервисы</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Корпоративным клиентам</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Продавцам техники</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Партнерам</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Производителям</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Наши сервисные центры</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
+            </ul>
+        </section>
+        <footer class="menu__footer">
+            <ul class="footer-list">
+                <li class="footer-list__item"><a href="#" class="link-btn"><img src="assets/img/icon/call.svg" alt="call"></a></li>
+                <li class="footer-list__item"><a href="#" class="link-btn"><img src="assets/img/icon/message.svg" alt="message"></a></li>
+                <li class="footer-list__item"><a href="#" class="link-btn"><img src="assets/img/icon/profile.svg" alt="profile"></a></li>
+            </ul>
+            <a href="mailto:mail@cps.com" class="mailto-link">mail@cps.com</a>
+            <a href="tel:+78008908900" class="phone-link">8 800 890 89 00</a>
+            <ul class="lang-list">
+                <li class="lang-list__item"><a href="#" class="lang-list_link">ru</a></li>
+                <li class="lang-list__item"><a href="#" class="lang-list_link">en</a></li>
+                <li class="lang-list__item"><a href="#" class="lang-list_link">ch</a></li>
+            </ul>
+        </footer>
+    </nav>
+</section>
 
-                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-                </p>
-                <p class="article-text__text_none-3">
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>
-                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
-                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-                    очередь, советуют нас родным и близким.
-                </p>
-                <button class="article__read-more-btn">
-                    <img class="article__read-more-btn_img" src="assets\img\icon\01.svg" alt="Read more">
-                    Читать далее
-                </button>
-            </article>
-            <img class="section-container__img" src="assets\img\content\bg-main.jpg" alt="Фото main">
-        </div>
-    </section>
-</main>
+
+
+<!--<header class="header">-->
+<!--    <nav class="container">-->
+<!--        <ul class="container-list__left">-->
+<!--            <li class="container-list__item container-list__item_1">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\burger-after.svg" alt="Burger">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="body__divider body__divider_1 body__divider_none"></li>-->
+<!--            <li>-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img class="header-inner__img" src="assets\img\content\logo.svg" alt="logo">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <ul class="header-inner__right">-->
+<!--            <li class="container-list__item container-list__item_2">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\call.svg" alt="Call">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="container-list__item container-list__item_3">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\message.svg" alt="Chat">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="container-list__item container-list__item_4">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\profile.svg" alt="Profile">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="body__divider body__divider_1"></div>-->
+<!--            </li>-->
+<!--            <li class="container-list__item container-list__item_5">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\setting.svg" alt="Repair">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="container-list__item container-list__item_6">-->
+<!--                <a href="#" class="container-list__link">-->
+<!--                    <img src="assets\img\icon\сheck-status.svg" alt="Check Status">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</header>-->
+<!--<hr class="shadow">-->
+<!--<main class="main">-->
+<!--    <section class="main-title">-->
+<!--        <article class="main-title__article-left">-->
+<!--            <div class="body__divider body__divider_2"></div>-->
+<!--            <h1 class="main-title__title">Услуги и сервисы</h1>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <ul class="main-title__article-right main-title__right-none">-->
+<!--                <p>Оставить заявку</p>-->
+<!--                <li class="container-list__item container-list__item_5">-->
+<!--                    <a href="#" class="container-list__link">-->
+<!--                        <img src="assets\img\icon\setting.svg" alt="Repair">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <p>Статус ремонта</p>-->
+<!--                <li class="container-list__item container-list__item_6">-->
+<!--                    <a href="#" class="container-list__link">-->
+<!--                        <img src="assets\img\icon\сheck-status.svg" alt="Check Status">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </article>-->
+<!--    </section>-->
+<!--    <section class="main-section">-->
+<!--        <nav class="main-section__navigation">-->
+<!--            <button class="navigation__btn">Ремонтируемые бренды</button>-->
+<!--            <button class="navigation__btn">Ремонтируемые устройства</button>-->
+<!--            <button class="navigation__btn ">Цены на услуги</button>-->
+<!--            <button class="navigation__btn ">Ремонтируемые устройства</button>-->
+<!--            <button class="navigation__btn ">Цены на услуги</button>-->
+<!--            <button class="navigation__btn ">Адреса сервисных центров</button>-->
+<!--            <button class="navigation__btn ">Специальные цены</button>-->
+<!--            <button class="navigation__btn last-item">Отзывы</button>-->
+<!--        </nav>-->
+<!--        <div class="section-container">-->
+<!--            <article class="article-text">-->
+<!--                <p class="article-text__text_none-1">-->
+<!--                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете-->
+<!--                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.-->
+<!--                </p>-->
+<!--                <p class="article-text__text_none-2">-->
+<!--                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете-->
+<!--                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>-->
+
+<!--                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера-->
+<!--                </p>-->
+<!--                <p class="article-text__text_none-3">-->
+<!--                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете-->
+<!--                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>-->
+<!--                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое-->
+<!--                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою-->
+<!--                    очередь, советуют нас родным и близким.-->
+<!--                </p>-->
+<!--                <button class="article__read-more-btn">-->
+<!--                    <img class="article__read-more-btn_img" src="assets\img\icon\read-more.svg" alt="Read more">-->
+<!--                    Читать далее-->
+<!--                </button>-->
+<!--            </article>-->
+<!--            <img class="section-container__img" src="assets\img\content\bg-main.jpg" alt="Фото main">-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</main>-->
 </body>
 </html>
+
+
