@@ -1,0 +1,643 @@
+@import 'vars.css';
+@import 'style.css';
+
+.header:after{
+    content: "";
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background: var(--highlight--color); /* задаём нужный цвет фоном */
+    width: 320px;
+    margin-left: -16px;
+    height: 1px;
+}
+
+.size_m {
+    min-height: 88px;
+}
+
+.header-list__item:nth-child(1){
+    margin-right: 16px;
+}
+.header-list__item:nth-child(2){
+    margin-right: 16px;
+    align-self: flex-start;
+}
+
+.type_hidden, .main-header-list_hidden{
+    display: none;
+}
+.header-list__item:nth-child(6){
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 16px;
+}
+.header-list__item:nth-child(6)::before {
+    content: "";
+    display: flex;
+    align-self: center;
+    background: var(--divider--color); /* задаём нужный цвет фоном */
+    width: 2px;
+    height: 32px;
+}
+
+.main{
+    padding-right: 16px;
+    padding-left: 16px;
+    background-color: var(--main--color);
+}
+.main__menu{
+
+}
+.menu__nav{
+
+}
+.main-header-list{
+    align-self: flex-end;
+}
+.main-header-list__item:nth-child(1){
+    align-self: flex-start;
+    flex-grow: 1;
+}
+.main-header-list__item:nth-child(2), .main-header-list__item:nth-child(3){
+    display: none;
+}
+.text-btn{
+    padding: 8px;
+}
+
+.main__title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+
+    min-height: 88px;
+    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.main__title::before {
+    content: "";
+    background: var(--highlight--color);
+
+    border-radius: 0px 50px 50px 0px;
+    width: 4px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: -16px;
+}
+
+.menu__list{
+    display: flex;
+    overflow-x: scroll;
+
+    align-content: center;
+    white-space: nowrap;
+
+    min-height: 40px;
+    margin-bottom: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    flex-grow: 1;
+}
+.menu__list::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-list__item{
+    flex-grow: 1;
+    padding: 8px 9px 8px 16px;
+    border: none;
+}
+.active:focus{
+    border: 2px solid var(--nav__main--border-color);
+    background: var(--header-color);
+    border-radius: 6px;
+}
+.nav-list__item:hover{
+    border: 2px solid var(--nav__main--border-color);
+    background: var(--header-color);
+    border-radius: 6px;
+}
+
+.main__container {
+
+}
+
+.container__descriptions {
+    min-height: 168px;
+}
+p{
+    margin: 0;
+}
+
+.description {
+}
+
+.size-description_s{
+    display: block;
+}
+.size-description_m, .size-description_l{
+    display: none;
+}
+
+.container__read-more-btn{
+    width: 137px;
+    height: 24px;
+    padding: 0;
+    margin: 0 0 16px;
+    border: none;
+    background-color: var(--main--color);
+    font-family: "TT Lakes Medium";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.img-read-more{
+    padding-left: 5px;
+    margin-right: 16px;
+}
+.container__img {
+    display: inherit;
+    justify-content: center;
+    width: 320px;
+    margin-left: -24px;
+    height: 230.8px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1119px) {
+    body{
+        min-height: 100%;
+    }
+    .header-list__item:nth-child(2) {
+        flex-grow: 1;
+        margin-right: 0;
+    }
+    .header-list__item:nth-child(3),.header-list__item:nth-child(4) {
+        margin-right: 16px;
+    }
+    .header-list__item:nth-child(5) {
+        margin-right: 20px;
+    }
+    .main{
+        min-height: 416px;
+    }
+    .main__container{
+        display: flex;
+        align-self: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex:1 1 auto;
+    }
+    .container__descriptions{
+        max-width: 312px;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+    .container__img{
+        height: 208px;
+        width: 360px;
+        border-radius: 6px;
+    }
+    .header:after{
+        content: "";
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background: var(--highlight--color); /* задаём нужный цвет фоном */
+        width: 768px;
+        margin-left: -16px;
+        height: 1px;
+    }
+    .type_hidden{
+        display: block;
+    }
+    .size-description_m{
+        display: block;
+    }
+    .size-description_s,.size-description_l, .main-header-list_hidden{
+        display: none;
+    }
+}
+
+
+/*Адаптив на 1120px*/
+@media screen and (min-width: 1120px) {
+    body{
+        min-height: 100%;
+        margin-right: 34px;
+    }
+    .header__container{
+        display: none;
+    }
+    .type_hidden{
+        display: block;
+    }
+    .main__title::before {
+        margin-left: -34px;
+    }
+    .menu__list{
+        display: flex;
+        white-space: nowrap;
+        flex-wrap: wrap;
+        min-height: 92px;
+        align-content: flex-start;
+    }
+    .main-header-list__item:nth-child(2), .main-header-list__item:nth-child(3){
+        display: flex;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    .last-item{
+        order: 1;
+        flex-grow: 0;
+    }
+    .main{
+        padding-top: 42px;
+        padding-right: 34px;
+        padding-left: 34px;
+        max-width:1120px;
+        min-height: 535px;
+        margin:auto;
+    }
+    .main__container{
+        display: flex;
+        align-self: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .container__descriptions{
+        max-width: 490px;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+    .container__img{
+        width: 531.35px;
+        height: 307px;
+        border-radius: 6px;
+        margin-right: 4px;
+    }
+    .size-description_s,.size-description_m{
+        display: none;
+    }
+    .size-description_l{
+        display: block;
+    }
+    .size-description_l, .main-header-list_hidden{
+        display: block;
+    }
+    .size-description_s,.size-description_m{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*!*Футер *!*/
+/*.header {*/
+/*    background-color: var(--header-color);*/
+/*    overflow-x: hidden;*/
+/*    min-height: 88px;*/
+/*}*/
+
+/*.container {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+
+/*li{*/
+/*    list-style-type: none;*/
+/*}*/
+
+/*.container-list__left{*/
+/*    min-height: 87px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    padding-left: 16px;*/
+/*}*/
+/*.header-inner__right{*/
+/*    min-height: 87px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.container-list__link {*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.container-list__item {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+
+/*    border-radius: 20px;*/
+/*    margin-right: 16px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+
+/*    background-color: var(--menu__btn-color);*/
+/*    border: none;*/
+/*}*/
+/*.container-list__item_1{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-right: 17px;*/
+/*}*/
+
+/*.body__divider::before {*/
+/*    background: var(--divider--color); !* задаём нужный цвет фоном *!*/
+/*    content: ""; !* создаём инлайн объект *!*/
+/*    display: block; !* преобразуем его в блочный *!*/
+/*    top: 0px; !*отступ будет 0 пикселей от верхней точки блока *!*/
+/*}*/
+
+/*.body__divider_1 {*/
+/*    background: var(--divider--color); !* задаём нужный цвет фоном *!*/
+/*    width: 2px;*/
+/*    height: 32px;*/
+/*    margin-right: 20px;*/
+/*}*/
+
+/*.body__divider_none {*/
+/*    display: none;*/
+/*}*/
+
+/*.header-inner__img {*/
+/*    margin-right: 16px;*/
+/*}*/
+
+/*.container-list__item_2,.container-list__item_3, .container-list__item_4 {*/
+/*    margin-right: 16px;*/
+/*    display: none;*/
+/*}*/
+
+/*!*Переход от header к main *!*/
+/*.shadow {*/
+/*    margin: 0;*/
+/*    margin-bottom: 24px;*/
+/*    padding: 0px;*/
+/*    border: 0.1px solid var(--nav__main--border-color);*/
+/*}*/
+/*!*Контент часть*!*/
+/*.main {*/
+/*    margin-bottom: 8px;*/
+/*}*/
+
+/*.main-title {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    align-content: center;*/
+/*}*/
+/*.main-title__article-left{*/
+/*    display: inherit;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    align-content: center;*/
+/*}*/
+/*.main-title__article-right{*/
+/*    display: inherit;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    align-content: center;*/
+/*}*/
+
+/*.body__divider_2 {*/
+/*    border-radius: 0px 50px 50px 0px;*/
+/*    background: var(--highlight--color); !* задаём нужный цвет фоном *!*/
+/*    width: 4px;*/
+/*    height: 40px;*/
+/*    margin-right: 20px;*/
+/*}*/
+
+/*.main-title__title {*/
+/*    font-family: "TT Lakes Regular";*/
+/*    font-weight: 700;*/
+/*    font-size: 28px;*/
+/*    margin: 0px;*/
+/*}*/
+/*.main-title__right{*/
+/*    !*display: none;*!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.main-section{*/
+
+/*}*/
+
+/*.main-section__navigation {*/
+/*    display: flex;*/
+/*    align-content: center;*/
+/*    font-size: 16px;*/
+/*    margin: 0px 16px 24px;*/
+/*    padding: 0px;*/
+/*    overflow-x: scroll;*/
+/*    white-space: nowrap;*/
+/*    flex-flow: row nowrap;*/
+/*    column-gap: 15px;*/
+/*}*/
+
+/*.main-section__navigation::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
+/*.navigation__btn {*/
+/*    border: none;*/
+/*    height: 30px;*/
+/*    background-color: var(--header-color);*/
+/*    color: var(--main-text--color);*/
+/*}*/
+/*.navigation__btn:hover{*/
+/*    border: 2px solid var(--nav__main--border-color);*/
+/*    background: var(--header-color);*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*.section-container{*/
+/*}*/
+/*.article-text {*/
+/*    margin: 0px;*/
+/*    font-size: 14px;*/
+/*    margin-right: 16px;*/
+/*    margin-left: 16px;*/
+/*    margin-bottom: 27.5px;*/
+/*}*/
+/*.article-text__text_none-1{*/
+/*    margin-top: 0px;*/
+/*}*/
+
+/*.main-title__right-none, .article-text__text_none-2{*/
+/*    display: none;*/
+/*}*/
+/*.article-text__text_none-3{*/
+/*    display: none;*/
+/*    margin-top: 0px;*/
+/*    margin-bottom: 16px;*/
+/*}*/
+
+/*.article__read-more-btn {*/
+/*    width: 132px;*/
+/*    height: 24px;*/
+/*    margin-left: 6px;*/
+/*    padding: 0;*/
+/*    border: none;*/
+/*    background-color: var(--header-color);*/
+/*    font-family: 'TT Lakes Medium';*/
+/*    font-weight: 700;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.section-container__img {*/
+/*    display: inherit;*/
+/*    justify-content: center;*/
+/*    width: 320px;*/
+/*    height: 230.8px;*/
+/*    top: 358.57px;*/
+/*}*/
+
+/*!*Адаптив на 768px*!*/
+/*@media screen and (min-width: 768px) and (max-width: 1119px) {*/
+/*    .header{*/
+/*        min-width: 768px;*/
+/*        min-height:88px;*/
+/*    }*/
+/*    .container-list__item_1{*/
+/*        margin-right: 20px;*/
+/*    }*/
+/*    .container-list__item_2, .container-list__item_3 {*/
+/*        margin-right: 16px;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+/*    .container-list__item_4{*/
+/*        display: inherit;*/
+/*    }*/
+/*    .main-title {*/
+/*        margin-bottom: 32px;*/
+/*    }*/
+/*    .main-title__none{*/
+/*        display: none;*/
+/*    }*/
+/*    .main-section{*/
+/*        margin-left: 24px;*/
+/*        margin-right: 40px;*/
+/*        margin-bottom: 40px;*/
+/*    }*/
+/*    .main-section__navigation {*/
+/*        margin-bottom: 32px;*/
+/*    }*/
+
+/*    .article-text__text_none-1{*/
+/*        display: none;*/
+/*    }*/
+/*    .body__divider_none, .article-text__text_none-2, .navigation__btn_none {*/
+/*        display: inherit;*/
+/*    }*/
+/*    .article-text{*/
+
+/*    }*/
+/*    .section-container{*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*    }*/
+/*    .article__read-more-btn_img{*/
+/*        margin-right: 15px;*/
+/*    }*/
+/*    .section-container__img{*/
+/*        height: 208px;*/
+/*        width: 360px;*/
+/*        top: 256px;*/
+/*        left: 384px;*/
+/*        border-radius: 6px;*/
+/*    }*/
+/*}*/
+
+/*!*Адаптив на 1120px*!*/
+/*@media screen and (min-width: 1120px) {*/
+/*    header, .shadow, .article-text__text_none-1{*/
+/*        display: none;*/
+/*    }*/
+/*    .body__divider_none, .article-text__text_none-3, .navigation__btn_none {*/
+/*        display: inherit;*/
+/*    }*/
+/*    .header-inner__right{*/
+/*        padding-left: 16px;*/
+/*    }*/
+/*    .main{*/
+/*        padding-top: 42px;*/
+/*        max-width:1120px;*/
+/*        min-height: 535px;*/
+/*        margin:auto;*/
+/*    }*/
+/*    .main-section{*/
+/*        margin-right: 29px;*/
+/*        margin-left: 34px;*/
+/*        margin-bottom: 49px;*/
+/*    }*/
+/*    .navigation__btn{*/
+/*        margin-bottom: 5px;*/
+/*    }*/
+/*    .last-item{*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        order: 1;*/
+/*    }*/
+/*    .main-title {*/
+/*        margin-bottom: 8px;*/
+/*    }*/
+/*    .main-title__none{*/
+/*        display: inherit;*/
+/*    }*/
+/*    .article-text__text_none-3{*/
+/*        margin-bottom: 18px;*/
+/*    }*/
+/*    .main-title__article-right{*/
+/*        display: flex;*/
+/*        column-gap: 15px*/
+/*    }*/
+/*    .main-section__navigation {*/
+/*        display: inline-block;*/
+/*        max-width: 1120px;*/
+/*        height: 21%;*/
+/*        overflow-x: hidden;*/
+/*        margin-bottom: 31px;*/
+/*        white-space: nowrap;*/
+/*        flex-wrap: wrap;*/
+/*        column-gap: 15px;*/
+/*    }*/
+/*    .article-text{*/
+/*        margin-right: 36px;*/
+/*    }*/
+/*    .section-container{*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*    }*/
+/*    .section-container__img{*/
+/*        width: 531.35px;*/
+/*        height: 307px;*/
+/*        top: 179px;*/
+/*        left: 561px;*/
+/*        border-radius: 6px;*/
+/*    }*/
+/*}*/
