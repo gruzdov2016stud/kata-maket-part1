@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const brandsShowMore = document.querySelector('.show-more__btn');
-    const brandsContainer = document.querySelector('.main-container');
-    const brandsShowMoreTxt = brandsShowMore.querySelector('.show-more__text');
+    let button = document.querySelector('.read-more')
+    let menuOpen = document.querySelector('.main-menu')
+    let menuClose = document.querySelector('.hide')
+    button.addEventListener('click', function () {
+        menuOpen.classList.add('main-menu--open')
+        button.classList.add('read-more--hide')
+        menuClose.classList.remove('hide--remove')
+    });
 
-    const toggleBrandsShowMore = () => {
-        brandsContainer.classList.toggle('main-container--show-more');
-        brandsShowMoreTxt.classList.toggle('show-more__text--hide');
-
-        if (brandsContainer.classList.contains('main-container--show-more')) {
-            brandsShowMoreTxt.textContent = 'Скрыть';
-        } else {
-            brandsShowMoreTxt.textContent = 'Показать все';
-        }
-    }
-
-    brandsShowMore.addEventListener('click', toggleBrandsShowMore);
+    menuClose.addEventListener('click', function () {
+        menuClose.classList.add('hide--remove')
+        menuOpen.classList.remove('main-menu--open')
+        button.classList.remove('read-more--hide')
+    });;
 });
