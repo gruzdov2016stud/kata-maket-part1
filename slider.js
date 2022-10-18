@@ -1,4 +1,5 @@
 const slider =  document.querySelector('.swiper');
+import Swiper from "swiper"
 
 const swiper = new Swiper(slider, {
     slidesPerView: 'auto',
