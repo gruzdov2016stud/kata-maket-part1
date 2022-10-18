@@ -4,55 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
-    <link rel="stylesheet" href="maket-4.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="maket-5.css">
 </head>
 <body>
-<!--Методология бэм-->
-<aside class="container-menu">
-    <aside class="menu">
-        <div class="cont">
-<!--            Этот див нужен чтобы задать ему значения и блоки стали расъезжаться, задать display:flex; justyf-->
-            <header class="header__container size_s">
-                <div class="header-list">
-<!--                    Исправить лист на блоки div-->
-<!--                    Иконки сделать через бэграунд имидж-->
-                    <div class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/burger-before.svg" alt="burger-before"></button ></div>
-                    <div class="header-list__item"><a  href="#" class="logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></div>
-                    <div class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/search.svg" alt="search"></button ></div>
-                </div>
-            </header>
-            <nav class="section-menu">
-                <ul class="menu__list">
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Ремонт техники</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Услуги и сервисы</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Корпоративным клиентам</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Продавцам техники</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Партнерам</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Производителям</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Наши сервисные центры</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
-                </ul>
-            </nav>
+    <section class="container">
+        <div class="container__title title">
+            Ремонт техники различных брендов
         </div>
-        <footer class="menu__footer">
-            <ul class="footer-list">
-<!--                Исправить лист на блоки-->
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/call.svg" alt="call"></button></li>
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/message.svg" alt="message"></button></li>
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/profile.svg" alt="profile"></button></li>
-            </ul>
-            <a href="mailto:mail@cps.com" class="mailto-link">mail@cps.com</a>
-            <a href="tel:+78008908900" class="phone-link">8 800 890 89 00</a>
-            <ul class="lang-list">
-                <li class="lang-list__item"><button href="#" class="lang-list_link">ru</button></li>
-                <li class="lang-list__item"><buttona href="#" class="lang-list_link">en</buttona></li>
-                <li class="lang-list__item"><button href="#" class="lang-list_link">ch</button></li>
-            </ul>
-        </footer>
-<!--        не должно быть два асайда-->
-    </aside>
-</aside>
-<div class="modal">
-</div>
+        <div class="swiper">
+            <div class="slider-container swiper-wrapper">
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__lenovo.svg" alt="logo__lenovo"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__samsung.svg" alt="logo__samsung"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__apple.svg" alt="logo__apple"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__sonic.svg" alt="logo__sonic"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__bosch.svg" alt="logo__bosch"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__hp.svg" alt="logo__hp"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__acer.svg" alt="logo__acer"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__sony.svg" alt="logo__sony"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__lenovo.svg" alt="logo__lenovo"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__samsung.svg" alt="logo__samsung"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+                <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__apple.svg" alt="logo__apple"
+                                                                           class="brand-container__logo">
+                    <button class="brand-container__dropdown-btn"></button>
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+            <div class="main">
+                <div class="main-container">
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__lenovo.svg" alt="logo__lenovo"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__samsung.svg" alt="logo__samsung"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__apple.svg" alt="logo__apple"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__sonic.svg" alt="logo__sonic"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__bosch.svg" alt="logo__bosch"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__hp.svg" alt="logo__hp"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__acer.svg" alt="logo__acer"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__sony.svg" alt="logo__sony"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__lenovo.svg" alt="logo__lenovo"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__samsung.svg" alt="logo__samsung"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                    <a href="#" class="brand-container__link swiper-link"><img src="assets/img/content/logo__apple.svg" alt="logo__apple"
+                                                                               class="brand-container__logo">
+                        <button class="brand-container__dropdown-btn"></button>
+                    </a>
+                </div>
+            </div>
+            <div class="show-more">
+                <button class="show-more__btn">
+                    <span class="show-more__text">Показать все</span>
+                </button>
+            </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
