@@ -6,27 +6,29 @@ body{
 
 }
 .modal{
-    position: absolute;
     filter: blur(0.7px);
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-}
-.container-menu{
-    display: block;
+    z-index: 0;
+    width: 100%;
     height: 100%;
 }
-.menu {;
+.container-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    z-index: 101;
+    overflow: auto;
+}
+
+.menu {
+    display: block;
     position: absolute;
     z-index: 9999;
     min-width: 320px;
     box-shadow: 16px 0px 52px 0px #0E185033,-2px 0px 4px 0px #454F7E05;
-    height: 100vh;
+    height: 100%;
 }
-.cont{
-    display: block;
-    height: 70%;
-}
+
 
 .img-btn-burger-before {
     background-image: url("assets/img/icon/burger-before.svg");
@@ -122,18 +124,19 @@ body{
 
 
 .footer {
-    min-height: 243px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 .menu__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
     padding-bottom: 18px;
     padding-right: 24px;
     padding-left: 24px;
 }
-
-
 
 .footer-btn {
     min-height: 72px;
