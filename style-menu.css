@@ -92,7 +92,7 @@ a{
     align-self: flex-start;
 }
 
-.link-btn {
+.btn {
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -104,11 +104,11 @@ a{
     background-color: var(--menu__btn-color);
     border: none;
 }
-.link-btn:hover{
+.btn:hover{
     border: 1px solid;
     animation:shadow 1s ease-in-out;
 }
-.link-btn:focus {
+.btn:focus {
     border: 1px solid;
 }
 
@@ -182,7 +182,7 @@ a{
     justify-content: flex-start;
 }
 
-.footer-list {
+.footer-btn {
     min-height: 72px;
     display: flex;
     align-items: center;
@@ -191,7 +191,7 @@ a{
     padding: 0;
 }
 
-.footer-list__item {
+.footer__item {
     margin-right: 16px;
 }
 

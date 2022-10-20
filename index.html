@@ -8,22 +8,21 @@
 </head>
 <body>
 <!--Методология бэм-->
-<aside class="container-menu">
-    <aside class="menu">
+<div class="container-menu">
+    <div class="menu">
         <div class="cont">
-<!--            Этот див нужен чтобы задать ему значения и блоки стали расъезжаться, задать display:flex; justyf-->
-            <header class="header__container size_s">
-                <div class="header-list">
-<!--                    Исправить лист на блоки div-->
-<!--                    Иконки сделать через бэграунд имидж-->
-                    <div class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/burger-before.svg" alt="burger-before"></button ></div>
-                    <div class="header-list__item"><a  href="#" class="logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></div>
-                    <div class="header-list__item"><button  href="#" class="link-btn"><img src="assets/img/icon/search.svg" alt="search"></button ></div>
+            <header class="header">
+                <div class="header__container">
+                    <div class="header-list">
+                        <div class="header-list__item"><button  href="#" class="btn img-btn-burger-before"></button ></div>
+                        <div class="header-list__item"><a  href="#" class="logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></div>
+                        <div class="header-list__item"><button  href="#" class="btn img-btn-search"></button ></div>
+                    </div>
                 </div>
             </header>
             <nav class="section-menu">
                 <ul class="menu__list">
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Ремонт техники</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link active">Ремонт техники</a></li>
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Услуги и сервисы</a></li>
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Корпоративным клиентам</a></li>
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Продавцам техники</a></li>
@@ -34,24 +33,24 @@
                 </ul>
             </nav>
         </div>
-        <footer class="menu__footer">
-            <ul class="footer-list">
-<!--                Исправить лист на блоки-->
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/call.svg" alt="call"></button></li>
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/message.svg" alt="message"></button></li>
-                <li class="footer-list__item"><button href="#" class="link-btn"><img src="assets/img/icon/profile.svg" alt="profile"></button></li>
-            </ul>
-            <a href="mailto:mail@cps.com" class="mailto-link">mail@cps.com</a>
-            <a href="tel:+78008908900" class="phone-link">8 800 890 89 00</a>
-            <ul class="lang-list">
-                <li class="lang-list__item"><button href="#" class="lang-list_link">ru</button></li>
-                <li class="lang-list__item"><buttona href="#" class="lang-list_link">en</buttona></li>
-                <li class="lang-list__item"><button href="#" class="lang-list_link">ch</button></li>
-            </ul>
+        <footer class="footer">
+            <div class="menu__footer">
+                <div class="footer-btn">
+                    <div class="footer__item"><button class="btn img-btn-call"></button></div>
+                    <div class="footer__item"><button class="btn img-btn-message"></button></div>
+                    <div class="footer__item"><button class="btn img-btn-profile"></button></div>
+                </div>
+                <a href="mailto:mail@cps.com" class="mailto-link">mail@cps.com</a>
+                <a href="tel:+78008908900" class="phone-link">8 800 890 89 00</a>
+                <ul class="lang-list">
+                    <li class="lang-list__item"><button class="lang-list_link">ru</button></li>
+                    <li class="lang-list__item"><buttona class="lang-list_link">en</buttona></li>
+                    <li class="lang-list__item"><button class="lang-list_link">ch</button></li>
+                </ul>
+            </div>
         </footer>
-<!--        не должно быть два асайда-->
-    </aside>
-</aside>
+    </div>
+</div>
 <div class="modal">
 </div>
 </body>
