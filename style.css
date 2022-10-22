@@ -77,14 +77,14 @@ button{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    z-index: 101;
+    z-index: 0;
     overflow: auto;
 }
 
 .menu {
     display: block;
     position: absolute;
-    z-index: 9999;
+    z-index: 1;
     min-width: 320px;
     box-shadow: 16px 0px 52px 0px #0E185033,-2px 0px 4px 0px #454F7E05;
     height: 100%;
