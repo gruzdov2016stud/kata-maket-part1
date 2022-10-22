@@ -51,27 +51,6 @@ a{
     text-decoration: none;
     color: var(--text--color);
 }
-.header{
-    padding-right: 16px;
-    padding-left: 16px;
-    min-width: 320px;
-    background-color: var(--header-color);
-}
-.header__container{
-    display: flex;
-    align-items: center;
-}
-.header-list, .main-header-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.header-list__item:nth-child(1){
-    margin-right: 16px;
-}
 .link-btn {
     cursor: pointer;
     width: 40px;
