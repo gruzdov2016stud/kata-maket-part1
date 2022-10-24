@@ -1,3 +1,5 @@
+@import 'vars.css';
+
 @font-face {
     font-family: "TT Lakes Bold";
     src: url(assets/fonts/TTLakes-Bold.ttf) format("eot"),
@@ -51,7 +53,38 @@ a{
     text-decoration: none;
     color: var(--text--color);
 }
-.link-btn {
+
+.header{
+    min-width: 320px;
+    min-height: 88px;
+    background-color: var(--header-color);
+}
+.header:after{
+    content: "";
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background: var(--highlight--color); /* задаём нужный цвет фоном */
+    width: auto;
+    height: 1px;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 18px;
+    width: 100%;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.btn {
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -64,11 +97,11 @@ a{
     border: none;
 }
 
-.link-btn:hover{
+.btn:hover{
     border: 1px solid;
     animation:shadow 1s ease-in-out;
 }
-.link-btn:focus {
+.btn:focus {
     border: 1px solid;
 }
 
@@ -83,5 +116,338 @@ a{
     to {
         border: 1px solid;
         filter:drop-shadow(0 0 4px #0E185033);
+    }
+}
+
+.header__item:nth-child(1){
+    margin-right: 16px;
+}
+
+.header__item:nth-child(1){
+    margin-right: 16px;
+}
+.header__item:nth-child(2){
+    margin-right: 16px;
+    align-self: flex-start;
+}
+
+.header__item--hidden, .main-header__item--hidden{
+    display: none;
+}
+.header__item:nth-child(6){
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 16px;
+}
+.header__item:nth-child(6)::before {
+    content: "";
+    display: flex;
+    align-self: center;
+    background: var(--divider--color); /* задаём нужный цвет фоном */
+    width: 2px;
+    height: 32px;
+}
+
+.main{
+    padding-right: 16px;
+    padding-left: 16px;
+    background-color: var(--main--color);
+}
+.main__menu{
+
+}
+.main-nav{
+    margin-bottom: 24px;
+}
+.main-header{
+    align-self: flex-end;
+}
+.main-header__item:nth-child(2), .main-header__item:nth-child(3){
+    display: none;
+}
+.main-header__text-btn{
+    padding: 8px;
+}
+
+.main-header__title {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 28px;
+
+    min-height: 88px;
+    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header__title::before {
+    content: "";
+    background: var(--highlight--color);
+
+    border-radius: 0px 50px 50px 0px;
+    width: 4px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: -16px;
+}
+
+.main-nav__list{
+    display: flex;
+    overflow-x: scroll;
+
+    align-content: center;
+    white-space: nowrap;
+
+    min-height: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    flex-grow: 1;
+}
+.main-nav__list::-webkit-scrollbar {
+    display: none;
+}
+
+.main-nav__item{
+    flex-grow: 1;
+    padding: 8px 9px 8px 16px;
+    border: none;
+}
+.main-nav__item--active{
+    border: 2px solid var(--nav__main--border-color);
+    background: var(--header-color);
+    border-radius: 6px;
+}
+.main-nav__item:hover{
+    border: 2px solid var(--nav__main--border-color);
+    background: var(--header-color);
+    border-radius: 6px;
+}
+
+.main-container {
+
+}
+
+.main-container__descriptions {
+    min-height: 168px;
+}
+p{
+    margin: 0;
+}
+
+.main-container__item {
+}
+
+.main-container__item--size_s{
+    display: block;
+}
+.main-container__item--size_m, .main-container__item--size_l{
+    display: none;
+}
+
+.read-more{
+    width: 137px;
+    height: 24px;
+    padding: 0;
+    margin: 0 0 16px;
+    border: none;
+    background-color: var(--main--color);
+    font-family: "TT Lakes Medium";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.main-container__btn{
+    cursor: pointer;
+    border: none;
+}
+
+.main-container__read-more-text{
+    position:relative;
+    margin:10px 0 0 57px;
+    font-family: "TT Lakes",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    border:none;
+    cursor: pointer;
+    background: none;
+}
+
+.main-container__read-more-text::after {
+    position: absolute;
+    content: '';
+    background-image: url("assets/img/icon/read-more.svg");
+    width:8px;
+    height:12px;
+    background-repeat: no-repeat;
+    right:120px;
+    top:4px;
+}
+
+.img-read-more{
+    padding-left: 5px;
+    margin-right: 16px;
+}
+.main-container__content {
+    display: inherit;
+    justify-content: center;
+    width: 320px;
+    margin-left: -24px;
+    height: 230.8px;
+}
+.btn-burger-after {
+    background-image: url("assets/img/icon/burger-after.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btn-call {
+    background-image: url("assets/img/icon/call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-message {
+    background-image: url("assets/img/icon/message.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-profile {
+    background-image: url("assets/img/icon/profile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-setting {
+    background-image: url("assets/img/icon/setting.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-сheck-status {
+    background-image: url("assets/img/icon/сheck-status.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1119px) {
+    body{
+        min-height: 100%;
+    }
+    .header__item:nth-child(2) {
+        flex-grow: 1;
+        margin-right: 0;
+    }
+    .header__item:nth-child(3),.header__item:nth-child(4) {
+        margin-right: 16px;
+    }
+    .header__item:nth-child(5) {
+        margin-right: 20px;
+    }
+    .main{
+        min-height: 416px;
+    }
+    .main-container{
+        display: flex;
+        align-self: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex:1 1 auto;
+        padding-top: 32px;
+
+    }
+    .main-container__descriptions{
+        max-width: 312px;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+    .main-container__content{
+        height: 208px;
+        width: 360px;
+        border-radius: 6px;
+    }
+    .header__item--hidden{
+        display: block;
+    }
+    .main-container__item--size_m{
+        display: block;
+    }
+    .main-container__item--size_s,.main-container__item--size_l, .main-header__item--hidden{
+        display: none;
+    }
+}
+
+
+/*Адаптив на 1120px*/
+@media screen and (min-width: 1120px) {
+    body{
+        min-height: 100%;
+        margin-right: 34px;
+    }
+    .header{
+        display: none;
+    }
+    .header__item--hidden{
+        display: block;
+    }
+    .main-header__title::before {
+        margin-left: -34px;
+    }
+    .main-nav__list{
+        display: flex;
+        white-space: nowrap;
+        flex-wrap: wrap;
+        min-height: 92px;
+        align-content: flex-start;
+    }
+    .main-header__item:nth-child(2), .main-header__item:nth-child(3){
+        display: flex;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    .main-nav__item--last{
+        order: 1;
+        flex-grow: 0;
+    }
+    .main{
+        padding-top: 42px;
+        padding-right: 34px;
+        padding-left: 34px;
+        width:1120px;
+        min-height: 574px;
+        margin:auto;
+    }
+    .main-container{
+        display: flex;
+        align-self: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .main-container__descriptions{
+        max-width: 490px;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+    .main-container__content{
+        width: 531.35px;
+        height: 307px;
+        border-radius: 6px;
+        margin-right: 4px;
+    }
+    .main-container__item--size_s,.main-container__item--size_m{
+        display: none;
+    }
+    .main-container__item--size_l{
+        display: block;
+    }
+    .main-container__item--size_l, .main-header__item--hidden{
+        display: block;
+    }
+    .main-container__item--size_s,.main-container__item--size_m{
+        display: none;
     }
 }
