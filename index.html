@@ -7,48 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<aside class="container-menu">
-    <div class="menu">
-        <div class="menu__container">
-            <header class="header">
-                <div class="header__container">
-                    <div class="header-list__item"><button  href="#" class="btn btn-burger"></button ></div>
-                    <div class="header-list__item"><a  href="#" class="logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></div>
-                    <div class="header-list__item"><button  href="#" class="btn btn-search"></button ></div>
+<aside class="navbar">
+    <div class="navbar__container">
+        <header class="navbar-header">
+            <div class="navbar-header__container">
+                <div class="navbar-header__item"><button class="btn btn__burger-befor"></button ></div>
+                <div class="navbar-header__item"><a href="#" class="navbar-header__logo"><img src="assets/img/content/logo.svg" alt="logo"></a ></div>
+                <div class="navbar-header__item"><button class="btn btn__search"></button ></div>
+            </div>
+        </header>
+        <nav class="navbar-nav">
+            <ul class="navbar-nav__list">
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link navbar-nav__link--active">Ремонт техники</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Услуги и сервисы</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Корпоративным клиентам</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Продавцам техники</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Партнерам</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Производителям</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Наши сервисные центры</a></li>
+                <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <footer class="navbar-footer">
+            <div class="navbar-footer__container">
+                <div class="navbar-footer__container-btn">
+                    <div class="navbar-footer__btn-item"><button class="btn btn__call"></button></div>
+                    <div class="navbar-footer__btn-item"><button class="btn btn__message"></button></div>
+                    <div class="navbar-footer__btn-item"><button class="btn btn__profile"></button></div>
                 </div>
-            </header>
-            <nav class="section-menu">
-                <ul class="menu__list">
-                    <li class="menu-list__item"><a href="#" class="menu-list__link active">Ремонт техники</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Услуги и сервисы</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Корпоративным клиентам</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Продавцам техники</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Партнерам</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Производителям</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Наши сервисные центры</a></li>
-                    <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-        <footer class="footer">
-            <div class="menu__footer">
-                <div class="footer-btn">
-                    <div class="footer__item"><button class="btn btn-call"></button></div>
-                    <div class="footer__item"><button class="btn btn-message"></button></div>
-                    <div class="footer__item"><button class="btn btn-profile"></button></div>
+                <a href="mailto:mail@cps.com" class="navbar-footer__mailto-link">mail@cps.com</a>
+                <a href="tel:+78008908900" class="navbar-footer__phone-link">8 800 890 89 00</a>
+                <div class="navbar-footer__container-langs">
+                    <button class="navbar-footer__btn-lang">ru</button>
+                    <button class="navbar-footer__btn-lang">en</button>
+                    <button class="navbar-footer__btn-lang">ch</button>
                 </div>
-                <a href="mailto:mail@cps.com" class="mailto-link">mail@cps.com</a>
-                <a href="tel:+78008908900" class="phone-link">8 800 890 89 00</a>
-                <ul class="lang-list">
-                    <li class="lang-list__item"><button class="lang-list_link">ru</button></li>
-                    <li class="lang-list__item"><button class="lang-list_link">en</button></li>
-                    <li class="lang-list__item"><button class="lang-list_link">ch</button></li>
-                </ul>
             </div>
         </footer>
     </div>
 </aside>
-<div class="modal">
+<div class="navbar__blur">
 </div>
 </body>
 </html>

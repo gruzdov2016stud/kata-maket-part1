@@ -38,9 +38,9 @@ html{
 
 body{
     position: relative;
-    display: flex;
-    position: relative;
+    display: block;
     font-family: TT Lakes Regular;
+    max-height: 100%;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -65,38 +65,46 @@ button{
     cursor: pointer;
     background-color: initial;
 }
-
-.modal{
-    filter: blur(0.7px);
-    z-index: 0;
+.menu_container{
+    position: fixed;
+}
+.navbar{
+    position: absolute;
+    z-index: 3;
+    display: block;
     width: 100%;
     height: 100%;
 }
-.container-menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    z-index: 0;
-    overflow: auto;
-}
-
-.menu {
-    display: block;
+.navbar__container {
     position: absolute;
-    z-index: 1;
-    min-width: 320px;
+    display: block;
+    overflow: auto;
+    max-width: 320px;
+    height: 1000vh;
+    z-index: 2;
     box-shadow: 16px 0px 52px 0px #0E185033,-2px 0px 4px 0px #454F7E05;
-    height: 100%;
+}
+.navbar__container::-webkit-scrollbar {
+    display: none;
+}
+.navbar__blur{
+    position: absolute;
+    display: block;
+    overflow: auto;
+    min-height: 120vh;
+    filter: blur(0.7px);
+    z-index: 1;
+    width: 100%;
+    right: -320px;
 }
 
-.header{
+
+.navbar-header{
     min-width: 320px;
     background-color: var(--header-color);
 }
-.header__container{
+.navbar-header__container{
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-top: 18px;
@@ -106,7 +114,7 @@ button{
     flex-grow: 1;
 }
 
-.header-list__item:nth-child(1){
+.navbar-header__item:nth-child(1){
     margin-right: 16px;
 }
 
@@ -146,41 +154,41 @@ button{
     }
 }
 
-.btn-burger {
+.btn__burger-befor {
     background-image: url("assets/img/icon/burger-before.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
-.btn-call {
+.btn__call {
     background-image: url("assets/img/icon/call.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-message {
+.btn__message {
     background-image: url("assets/img/icon/message.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-profile {
+.btn__profile {
     background-image: url("assets/img/icon/profile.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-search {
+.btn__search {
     background-image: url("assets/img/icon/search.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 
-.header-list__item:nth-child(2){
+.navbar-header__item:nth-child(2){
     flex-grow: 1;
     align-self: flex-start;
 }
-.logo {
+.navbar-header__logo {
     display: block;
     width: 100%;
     height: 100%;
@@ -188,35 +196,35 @@ button{
     flex-grow: 1;
 }
 
-.section-menu {
+.navbar-nav {
     font-size: 16px;
     display: flex;
     max-height: 1900px;
     margin-left: -24px;
 }
 
-.menu__list {
+.navbar-nav__list {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     color: var(--text--color);
 }
 
-.menu-list__item {
+.navbar-nav__item {
     display: flex;
     align-items: center;
     min-height: 46px;
     flex-grow: 1;
 }
 
-.menu-list__link {
+.navbar-nav__link {
     display: flex;
     align-items: center;
     gap: 20px;
     width: 100%;
 }
 
-.menu-list__link::before {
+.navbar-nav__link::before {
     content: "";
     display: flex;
     align-self: center;
@@ -224,14 +232,14 @@ button{
     width: 3px;
     height: 32px;
 }
-.menu-list__link:focus::before {
+.navbar-nav__link:focus::before {
     background: var(--highlight--color);
 }
-.menu-list__link:hover {
+.navbar-nav__link:hover {
     color: #ACACB0FF;
 }
 
-.active{
+.navbar-nav__link--active{
     display: flex;
     white-space: nowrap;
     content: "";
@@ -242,12 +250,13 @@ button{
 }
 
 
-.footer {
+.navbar-footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 40vh;
 }
-.menu__footer{
+.navbar-footer__container{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -257,7 +266,7 @@ button{
     padding-left: 24px;
 }
 
-.footer-btn {
+.navbar-footer__container-btn {
     min-height: 72px;
     display: flex;
     align-items: center;
@@ -266,18 +275,18 @@ button{
     padding: 0;
 }
 
-.footer__item {
+.navbar-footer__btn-item {
     margin-right: 16px;
 }
 
-.mailto-link {
+.navbar-footer__mailto-link {
     display: flex;
     margin-bottom: 12px;
     font-size: 16px;
     min-height: 24px;
 }
 
-.phone-link {
+.navbar-footer__phone-link {
     font-family: "TT Lakes Bold";
     display: flex;
     margin-bottom: 40px;
@@ -285,7 +294,7 @@ button{
     min-height: 32px;
 }
 
-.lang-list {
+.navbar-footer__container-langs {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -293,16 +302,19 @@ button{
     padding: 0;
 }
 
-.lang-list__item {
+.navbar-footer__lang-item {
     min-height: 24px;
     min-width: 24px;
     margin-right: 7px;
 }
 
-.lang-list_link {
+.navbar-footer__btn-lang {
+    min-height: 24px;
+    min-width: 24px;
+    margin-right: 7px;
     text-transform: uppercase;
     font-color: var(--text--color);
 }
-.lang-list_link:hover {
+.navbar-footer__btn-lang:hover {
     color: var(--main-text--color);
 }
