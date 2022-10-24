@@ -299,36 +299,36 @@ p{
     margin-left: -24px;
     height: 230.8px;
 }
-.btn-burger-after {
+.btn__burger-after {
     background-image: url("assets/img/icon/burger-after.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
-.btn-call {
+.btn__call {
     background-image: url("assets/img/icon/call.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-message {
+.btn__message {
     background-image: url("assets/img/icon/message.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-profile {
+.btn__profile {
     background-image: url("assets/img/icon/profile.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-setting {
+.btn__setting {
     background-image: url("assets/img/icon/setting.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.btn-сheck-status {
+.btn__сheck-status {
     background-image: url("assets/img/icon/сheck-status.svg");
     background-repeat: no-repeat;
     background-position: center;
