@@ -1,16 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let button = document.querySelector('.read-more')
-    let menuOpen = document.querySelector('.main-menu')
-    let menuClose = document.querySelector('.hide')
-    button.addEventListener('click', function () {
-        menuOpen.classList.add('main-menu--open')
-        button.classList.add('read-more--hide')
-        menuClose.classList.remove('hide--remove')
-    });
+const brandsButton = document.querySelector('.container-brands__btn');
+const brandsContainer = document.querySelector('.container-brands__desktop');
+const brandsShowMoreTxt = brandsButton.querySelector('.container-brands__text-btn');
 
-    menuClose.addEventListener('click', function () {
-        menuClose.classList.add('hide--remove')
-        menuOpen.classList.remove('main-menu--open')
-        button.classList.remove('read-more--hide')
-    });;
-});
+const toggleShowMore = function () {
+    brandsContainer.classList.toggle('container-brands__desktop--show-more');
+    brandsShowMoreTxt.classList.toggle('container-brands__text-btn--hide');
+    if (brandsContainer.classList.contains('container-brands__desktop--show-more')) {
+        brandsShowMoreTxt.textContent = 'Скрыть';
+    } else {
+        brandsShowMoreTxt.textContent = 'Показать всё';
+    }
+}
+
+brandsButton.addEventListener('click', toggleShowMore);

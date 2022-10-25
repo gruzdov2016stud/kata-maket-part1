@@ -25,211 +25,140 @@
     font-style: normal;
 }
 
-html{
+html {
     box-sizing: border-box;
 }
-*,*::after,*::before {
+
+*, *::after, *::before {
     box-sizing: inherit;
 }
-body{
+
+body {
     position: relative;
     font-family: "TT Lakes Regular";
     font-weight: 400;
     margin: 0;
     padding: 0;
 }
+
+h1 {
+    color: var(--title);
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.container {
+    display: block;
+    height: 210px;
+}
+
 .container__title {
+    margin: 0;
     padding: 16px;
 }
+
 .title {
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
-    color: var(--title);
 }
 
-@media (min-width:320px) {
 
-    .main-menu, .read-more, .hide {
-        display:none;
-    }
+.container-brands__desktop {
 
-    body {
-        min-width: 320px;
-        padding: 0;
+}
+
+body {
+    min-width: 320px;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+header {
+    min-width: 320px;
+    min-height: 80px;
+    background: linear-gradient(#F8F8F8 100%, #FFFFFF 100%);
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: "TT Lakes Medium", sans-serif;
+    font-size: 16px;
+    padding-left: 16px;
+    color: #7E7E82;
+}
+
+.swiper {
+    min-width: 320px;
+    height: 130px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 224px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    margin: 16px 0 16px 16px;
+    background-color: white;
+    z-index: 1;
+}
+
+.swiper-slide:hover,
+.swiper-slide:focus {
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px var(--dropdown-btn);
+    transition: box-shadow 0.2s ease-in-out;
+    border: 1px solid #ffffff;
+}
+
+.swiper-pagination {
+    transform: scale(1.5);
+}
+
+.container-brands__btn {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .swiper, .swiper-wrapper {
+        height: auto;
         margin: 0;
-        height: 100vh;
-        background-color: #F2F2F2;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
     }
-
-    header {
-        min-width: 320px;
-        min-height: 80px;
-        background: linear-gradient(#F8F8F8 100%, #FFFFFF 100%);
-        display: flex;
-        align-items: center;
-    }
-
-    h1 {
-        font-family: "TT Lakes Medium", sans-serif;
-        font-size: 16px;
-        padding-left: 16px;
-        color: #7E7E82;
-    }
-
-    .swiper {
-        min-width: 320px;
-        height: 130px;
-
-    }
-    .swiper::before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 72px;
-        background: -webkit-gradient(linear, right top, left top, from(#F8F8F8), to(transparent));
-        background: -o-linear-gradient(right, #F8F8F8 0%, transparent 100%);
-        background: linear-gradient(to left, #F8F8F8 0%, transparent 100%);
-        top: 16px;
-        right: 0;
-        z-index: 2;
-
-    }
-
-    .swiper-slide {
-        max-width: 224px;
-        height: 72px;
-        border: 1px solid #EAEAEA;
-        border-radius: 5px;
-        margin: 16px 0 16px 16px;
-        background-color: white;
-        z-index: 1;
-    }
-
     .swiper-pagination {
-        transform: scale(1.5);
-    }
-
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-    }
-
-    .btn-forward {
-        background-image: url("assets/img/icon/go.svg");
-        background-color:white;
-        border:none;
-        width:40px;
-        height:40px;
-        cursor: pointer;
-        margin-right: 16px;
-    }
-
-    .btn-lenovo::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__lenovo.svg");
-        width:108px;
-        height:32px;
-        left:16px;
-        bottom:16px;
-    }
-
-    .btn-sumsung::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__samsung.svg");
-        width:116px;
-        height:39px;
-        left:16px;
-        bottom:16px;
-    }
-
-    .btn-apple::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__apple.svg");
-        background-repeat: no-repeat;
-        width:44px;
-        height:44px;
-        left:16px;
-        bottom:16px;
-    }
-
-    .btn-view-sonic::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__sonic.svg");
-        background-repeat: no-repeat;
-        width:128px;
-        height:21px;
-        left:16px;
-        bottom:25px;
-    }
-    .btn-bosch::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__bosch.svg");
-        background-repeat: no-repeat;
-        width:128px;
-        height:29px;
-        left:16px;
-        bottom:20px;
-    }
-
-    .btn-hp::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__hp.svg");
-        background-repeat: no-repeat;
-        width:52px;
-        height:52px;
-        left:16px;
-        bottom:10px;
-    }
-
-    .btn-acer::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__acer.svg");
-        background-repeat: no-repeat;
-        width:94px;
-        height:24px;
-        left:16px;
-        bottom:24px;
-    }
-
-    .btn-sony::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/content/logo__sony.svg");
-        background-repeat: no-repeat;
-        width:128px;
-        height:26px;
-        left:16px;
-        bottom:20px;
-    }
-}
-
-@media (min-width:768px) {
-    .main-menu, .read-more, .hide {
-        display:initial;
-    }
-
-    .swiper {
         display: none;
     }
-
-    .main-menu {
+    .container-brands__desktop {
         display: grid;
         grid-template-columns: repeat(auto-fill, 224px);
-        gap:24px;
+        gap: 24px;
         padding: 24px;
-        height:200px;
+        height: 160px;
+        width: auto;
         overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .container-brands__desktop--show-more {
+        height: 350px;
+        gap: -24px;
+        overflow: hidden;
+        transition: all 0.5s ease;
     }
 
     .main-menu--open {
@@ -239,80 +168,79 @@ body{
     .swiper-slide {
         margin: 0;
     }
+    .container-brands__btn {
+        display: block;
+        cursor: pointer;
+        border: none;
+    }
 
-    .read-more {
-        position:relative;
-        margin:10px 0 0 57px;
-        font-family: "TT Lakes",sans-serif;
+    .container-brands__text-btn {
+        position: relative;
+        margin: 10px 0 0 57px;
+        font-family: "TT Lakes Regular";
         font-size: 16px;
         font-weight: 500;
         font-style: normal;
-        border:none;
+        border: none;
         cursor: pointer;
         background: none;
     }
 
-    .read-more::after {
+    .container-brands__text-btn::after {
         position: absolute;
-        content: '';
         background-image: url("assets/img/icon/read-more.svg");
-        width:8px;
-        height:12px;
+        content: '';
+        width: 8px;
+        height: 12px;
         background-repeat: no-repeat;
-        right:120px;
-        top:7px;
+        right: 110px;
+        top: 3px;
+        transition: all 1ms ease;
+
     }
 
-    .read-more--hide {
-        display:none;
-    }
-
-    .hide {
-        position:relative;
-        margin:10px 0 0 57px;
-        font-family: "TT Lakes Medium",sans-serif;
+    .container-brands__text-btn--hide {
+        position: relative;
+        margin: 10px 0 0 57px;
+        font-family: "TT Lakes Regular";
         font-size: 16px;
         font-weight: 500;
         font-style: normal;
-        border:none;
+        border: none;
         cursor: pointer;
         background: none;
     }
 
-    .hide::after {
-        position: absolute;
-        content: '';
-        background-image: url("assets/img/icon/read-more.svg");
-        width:8px;
-        height:12px;
-        background-repeat: no-repeat;
-        right:75px;
-        top:5px;
+    .container-brands__text-btn--hide::after {
         transform: rotate(180deg);
+        right: 67px;
+        top: -6px;
+        margin: 10px 0 0 0px;
+        transition: all 1ms ease;
+
     }
 
-    .hide--remove {
-        display: none;
-    }
 }
 
-@media (min-width:1120px) {
-    .main-menu {
-        display:none;
+@media (min-width: 1120px) {
+    .container-brands__desktop {
+        display: none;
     }
 
-    .main-menu {
-        min-width:1120px;
-        height:230px;
+    .container-brands__desktop {
+        min-width: 1120px;
+        height: 160px;
         display: grid;
         grid-template-columns: repeat(auto-fill, 240px);
-        grid-column-gap: 32px;
-        grid-row-gap: 32px;
         padding: 32px;
     }
 
+    .container-brands__desktop--show-more {
+        height: 280px;
+    }
+
     .main-menu--open {
-        height:auto;
+        height: auto;
     }
 
     .swiper-slide {
