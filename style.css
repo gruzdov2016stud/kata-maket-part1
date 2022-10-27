@@ -34,7 +34,6 @@ html {
 }
 
 body {
-    position: relative;
     font-family: "TT Lakes Regular";
     font-weight: 400;
     margin: 0;
@@ -46,14 +45,7 @@ h1 {
 }
 
 button {
-    margin: 0;
-    padding: 0;
     cursor: pointer;
-}
-
-.container {
-    display: block;
-    height: 210px;
 }
 
 .container__title {
@@ -68,28 +60,6 @@ button {
     letter-spacing: -0.2px;
     text-transform: uppercase;
 }
-
-
-.container-brands__desktop {
-
-}
-
-body {
-    min-width: 320px;
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    background-color: #F2F2F2;
-}
-
-header {
-    min-width: 320px;
-    min-height: 80px;
-    background: linear-gradient(#F8F8F8 100%, #FFFFFF 100%);
-    display: flex;
-    align-items: center;
-}
-
 h1 {
     font-family: "TT Lakes Medium", sans-serif;
     font-size: 16px;
@@ -103,23 +73,30 @@ h1 {
 }
 
 .swiper-slide {
+    position: relative;
+    box-sizing: border-box;
+
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
     max-width: 224px;
     height: 72px;
     border: 1px solid #EAEAEA;
-    border-radius: 5px;
-    margin: 16px 0 16px 16px;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px 0 10px 10px;
     background-color: white;
-    z-index: 1;
+
 }
+
 
 .swiper-slide:hover,
 .swiper-slide:focus {
     box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px var(--dropdown-btn);
-    transition: box-shadow 0.2s ease-in-out;
-    border: 1px solid #ffffff;
+    transition: box-shadow 1s ease-in-out;
+    border: 2px solid var(--dropdown-btn);
 }
 
 .swiper-pagination {
@@ -128,6 +105,7 @@ h1 {
 
 .container-brands__btn {
     display: none;
+    background-color: white;
 }
 
 @media (min-width: 768px) {
