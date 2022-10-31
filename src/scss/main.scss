@@ -1,0 +1,25 @@
+.main {
+  height: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  background-color: $backgroundColorMain;
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-xl) {
+    min-height:416px;
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    //padding: 0px 34px 42px 34px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 1120px;
+  }
+
+}
+
+
+
+
+
+

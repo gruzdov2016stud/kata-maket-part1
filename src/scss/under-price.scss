@@ -1,0 +1,42 @@
+.under-price__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 19px;
+    margin-bottom: 50px;
+    @media (min-width: $screen-md) {
+        padding: 0;
+        width: 95%;
+        margin: 0 auto 50px;
+    }
+}
+
+.under-price__text {
+    display: inline-block;
+    max-width: 426px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.200px;
+}
+
+.under-price__link {
+
+    display: inline;
+    font-size: $standartRem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: $fontRegular;
+
+    &::after {
+        margin-left: 5px;
+        display: inline-block;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid $formBtnColor;
+        border-bottom: 2px solid $formBtnColor;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+
+    }
+}

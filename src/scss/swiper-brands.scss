@@ -1,0 +1,51 @@
+.swiper-brands {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 72px;
+  max-width: 224px;
+
+  border: 1px solid $formBorderColor;
+  border-radius: 6px;
+  padding-left: 16px;
+  padding-right: 10px;
+  margin: 10px 0 10px 10px;
+
+  background-color: $backgroundСolorBody;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff3e79;
+    border-radius: 50%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #ff3e79;
+    border-bottom: 2px solid #ff3e79;
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 3px $backgroundСolorBody, 0 0 0 5px $formBtnColor;
+    transition: box-shadow 1s ease-in-out;
+    border: 2px solid $backgroundСolorBody;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin: 0;
+  }
+  @media screen and (min-width: $screen-xxl) {
+    border: 1px solid $formBorderColor;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,136 @@
+.main-container {
+  display: grid;
+  grid-template-row: repeat(2, 50px);
+  margin-bottom: 42px;
+  gap: 20px;
+
+  &__read-more {
+    border: none;
+    padding-right: 34px;
+    padding-left: 34px;
+    background-color: $backgroundColorMain;
+    font-family: $fonts;
+    font-size: $pRem;
+  }
+
+  &__descriptions {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 1ms ease;
+  }
+
+  &__descriptions--hide {
+    display: block;
+    overflow: hidden;
+    max-height: 400px;
+    transition: all 1ms ease;
+  }
+
+  &__item{
+    display: block;
+    min-width: auto;
+    padding-right: 3px;
+  }
+  &__btn {
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+  &__btn-read-more-text {
+    position: relative;
+    margin: 10px 0 0 25px;
+    padding-bottom: 10px;
+    font-family: $fonts;
+    font-size: $sectionTitleRem;
+    font-weight: $fontRegular;
+    background: none;
+  }
+
+  &__btn-read-more-text::after {
+    position: absolute;
+    background-image: url("../img/read-more.svg");
+    content: '';
+    width: 8px;
+    height: 12px;
+    background-repeat: no-repeat;
+    right: 110px;
+    top: 3px;
+  }
+  &__read-more-text-btn--hide {
+    position: relative;
+  }
+
+  &__read-more-text-btn--hide::after {
+    transform: rotate(180deg);
+    top: 1px;
+  }
+
+  &__content {
+    display: grid;
+    justify-self: center;
+    min-width: auto;
+    width: 320px;
+    height: 230.8px;
+    margin-left: -16px;
+    transition-property: width, height;
+    transition-duration: 1s, 1s;
+  }
+  @media screen and (max-width: 325px) and (min-width: $screen-md) {
+    justify-self: stretch;
+
+    &__descriptions {
+      display: block;
+      min-height: 90px;
+    }
+    &__item{
+      display: block;
+      min-width: 100%;
+    }
+
+  }
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-xl) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+
+    &__descriptions {
+      font-size: 14px;
+      flex-grow: 1;
+    }
+    &__item{
+      display: block;
+      width: 100%;
+    }
+    &__content {
+      width: 431.35px;
+      height: 307px;
+      border-radius: 6px;
+      border-radius: 6px;
+    }
+  }
+  @media screen and (min-width: $screen-xl) {
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    &__descriptions{
+      max-width: 490px;
+      font-size: 14px;
+      flex-grow: 1;
+    }
+    &__content{
+      width: 531.35px;
+      height: 307px;
+      border-radius: 6px;
+      margin-right: 4px;
+    }
+    &__item,
+    &__item--hidden{
+      display: block;
+    }
+
+  }
+
+}

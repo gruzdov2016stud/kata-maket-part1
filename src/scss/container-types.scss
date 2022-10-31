@@ -1,0 +1,96 @@
+.container-types {
+  display: block;
+  min-width: 320px;
+  height: auto;
+
+  &__desktop {
+    height: auto;
+    padding: 10px;
+  }
+  &__btn {
+    display: none;
+    background-color: $backgroundСolorBody;
+  }
+  &__headline{
+    font-family: $fonts;
+    font-weight: $fontNormal;
+    font-size: $modalTittleRem;
+    color: $sectionTextColor;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    &__desktop {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 280px);
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px;
+      height: 185px;
+      width: auto;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    &__desktop--show-more {
+      height: 620px;
+      gap: -24px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    &__btn{
+      position: relative;
+      margin: 10px 0 0 25px;
+      padding-bottom: 10px;
+      font-family: $fonts;
+      font-size: $sectionTitleRem;
+      font-weight: $fontRegular;
+      background: none;
+    }
+    &__btn {
+      display: block;
+      cursor: pointer;
+      border: none;
+    }
+
+    &__text-btn {
+      position: relative;
+      margin: 10px 0 0 25px;
+      padding-bottom: 10px;
+      font-family: $fonts;
+      font-size: $sectionTitleRem;
+      font-weight: $fontRegular;
+      background: none;
+    }
+
+    &__text-btn::after {
+      position: absolute;
+      background-image: url("../img/read-more.svg");
+      content: '';
+      width: 8px;
+      height: 12px;
+      background-repeat: no-repeat;
+      right: 110px;
+      top: 3px;
+      transition: all 5ms ease;
+    }
+
+    &__text-btn--hide {
+      position: relative;
+    }
+
+    &__text-btn--hide::after {
+      transform: rotate(180deg);
+      transition: all 5ms ease;
+      top: 1px;
+      right: 65px;
+    }
+
+  }
+  @media screen and (min-width: $screen-xxl) {
+    &__desktop {
+      display: grid;
+      padding: 32px;
+    }
+  }
+
+}

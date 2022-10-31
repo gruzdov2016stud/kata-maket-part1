@@ -1,0 +1,102 @@
+.btn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $formBtnColor;
+  border: none;
+
+  &__burger-after {
+    background-image: url("../img/burger-after.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__call {
+    background-image: url("../img/call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__message {
+    background-image: url("../img/message.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__profile {
+    background-image: url("../img/profile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__setting {
+    background-image: url("../img/setting.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__сheck-status {
+    background-image: url("../img/сheck-status.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__burger-befor {
+    background-image: url("../img/burger-before.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__search {
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px $formBtnColor;
+    transition: box-shadow 0.2s ease-out;
+    outline: none;
+  }
+
+  @media screen and (min-width: $screen-xl){
+    &__burger-befor--hidden{
+      display: none;
+    }
+  }
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--close {
+    position: relative;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      left: 9px;
+      top: 19px;
+      width: 22px;
+      height: 2px;
+      background-color: $backgroundСolorBody;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+

@@ -1,0 +1,253 @@
+.price-list {
+  background-color: $backgroundColorMain;
+  padding-bottom: 47px;
+
+  &__header-row {
+    display: none;
+  }
+
+  &__table {
+    display: block;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__items {
+    margin: 0 8px 16px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $backgroundСolorBody;
+    min-width: 260px;
+    height: 200px;
+    border-radius: 6px;
+    margin-right: 16px;
+    padding: 16px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    & dt {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      padding-bottom: 4px;
+      color: $sectionTextColor;
+    }
+
+    & dd {
+      padding-bottom: 16px;
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+    &:hover{
+      box-shadow: 0 0 0 3px white, 0 0 0 5px $formBtnColor;
+      transition: box-shadow 0.2s ease-out;
+      outline: none;
+    }
+    @media (min-width: $screen-md) {
+      &:hover{
+        box-shadow: 0 0 0 0px white;
+        transition: box-shadow 0s ease-out;
+        outline: none;
+      }
+    }
+  }
+
+  &__order {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $TableColor;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    background-color: $formTextLinkColor;
+    border-radius: 16px;
+    padding: 5px 40px 5px 10px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 3px $TableColor, 0 0 0 5px $formTextLinkColor;
+      transition: all 0.2s ease-in-out;
+      color: $formTextLinkColor;
+      background-color: $TableColor;
+
+      &::before {
+        border-color: $formTextLinkColor;
+        transition: border-color 0.2s ease-in-out;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 16px;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      border: 2px solid $TableColor;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__description {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $difTextColor;
+    padding-left: 16px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__offer {
+    position: relative;
+    display: block;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $difTextColor;
+    text-decoration: none;
+    padding-left: 16px;
+
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      bottom: 8px;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid $formTextLinkColor;
+      border-bottom: 2px solid $formTextLinkColor;
+      transform: rotate(-45deg);
+    }
+  }
+  @media (min-width: $screen-md) {
+    &__table {
+      padding: 0 24px 24px;
+
+    }
+
+    &__header {
+      display: block;
+    }
+
+    &__header-row {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
+      height: 64px;
+      margin-right: 0;
+      padding: 16px;
+      text-align: left;
+
+      & li {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $sectionTextColor;
+
+        &:nth-child(1) {
+          width: 50%;
+        }
+
+        &:nth-child(2) {
+          min-width: 80px;
+        }
+
+        &:nth-child(3) {
+          width: 15%;
+        }
+
+        &:nth-child(4) {
+          width: 120px;
+        }
+      }
+    }
+
+    &__items {
+      flex-direction: column;
+      align-items: stretch;
+      width: 1050px;
+      border-radius: 6px;
+      background-color: $TableColor;
+      padding: 0 0;
+      margin: 0;
+      left: 32px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      margin: 0;
+      padding: 16px 16px;
+
+      border-bottom: 1px solid $formBorderColor;
+      border-radius: 0;
+      background-color: transparent;
+
+      &:nth-last-of-type(1) {
+        border: none;
+      }
+
+      & dt {
+        display: none;
+      }
+
+      & dd {
+
+        padding: 0;
+
+        &:nth-child(2) {
+          width: 50%;
+        }
+
+        &:nth-child(4) {
+          min-width: 80px;
+        }
+
+        &:nth-child(6) {
+          width: 15%;
+        }
+
+        &:nth-child(8) {
+          width: 120px;
+        }
+      }
+    }
+
+    &__order {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $screen-xxl) {
+    &__table {
+      padding: 0 32px 32px;
+    }
+  }
+}

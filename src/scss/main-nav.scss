@@ -1,0 +1,76 @@
+.main-nav {
+  margin-bottom: 24px;
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-left: 18px;
+    max-width: 1056px;
+    justify-content: flex-start;
+    flex: 1 0 auto;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 33px;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+  }
+
+  &__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    font-family: $fonts;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 17px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-align: center;
+    flex: 0 0 auto;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+  }
+
+  &__item:hover {
+    border: 2px solid #B8FFEC;
+    background-color:#fff
+  }
+  &__item--active {
+    border: 2px solid #B8FFEC;
+    background-color:#fff
+  }
+  &__link{
+    font-family: $fonts;
+    font-size: $standartRem;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+  }
+
+
+  @media screen and (min-width: $screen-xl) {
+    //нужно для общего макета
+    // body{
+    //  min-height: 100%;
+    //  margin-right: 34px;
+    //}
+
+    &__list{
+      display: flex;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      min-height: 92px;
+      align-content: flex-start;
+    }
+    &__item--last{
+      order: 1;
+      flex-grow: 0;
+    }
+
+  }
+
+}

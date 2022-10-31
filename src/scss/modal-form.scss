@@ -1,0 +1,67 @@
+.modal-form {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: $backgroundСolorBody;
+    max-width: 440px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+                16px 0px 52px rgba(14, 24, 80, 0.2);
+    z-index: 100;
+}
+
+.modal-form__container {
+    margin: 0 auto;
+    padding-top: 24px;
+    width: 85%;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+        padding-top: 55px;
+    }
+}
+
+
+.modal-form__approval {
+    font-size: 14px;
+    line-height: 16px;
+    color: $formTextApprovalColor;
+    font-weight: $fontRegular;
+    margin-bottom: 19px;
+}
+
+.modal-form__link {
+    color: $formTextLinkColor;
+}
+
+.modal-form__submit {
+    position: absolute;
+    right: 0;
+    width: 136px;
+    height: 32px;
+    margin-left: auto;
+    background-color: $formBtnColor;
+    border: 1px solid $formBtnColor;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: $fontBold;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        color: $formTextLinkColor;
+        background-color: $backgroundColorMain;
+    }
+}
+
+.modal-form__close {
+
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: 46px;
+    left: -100px;
+  }
+
+}
+

@@ -1,17 +1,43 @@
-$bgColor: #24292e;
-$text: #fff;
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/normalize.css/normalize.css';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+// general
+@import './variables';
+@import './my-null';
+@import './fonts';
+@import './btn';
+@import './btnMore';
+@import './container-pages';
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+// block 1.3
+@import './service-page';
+@import './header';
+@import './main';
+@import './main-header';
+@import './main-nav';
+@import './main-container';
+@import './main-footer';
+
+// block 1.4
+@import './navbar';
+//@import './navbar-header';
+//@import './navbar-nav';
+//@import './navbar-footer';
+
+// block 1.5
+@import './container-brands';
+@import './container-types';
+@import './section-headline';
+@import './swiper-brands';
+@import './swiper-type';
+
+// block 1.6
+@import './price-list';
+@import './under-price';
+
+@import './modal-call';
+@import './modal-feedback';
+@import './modal-form';
+@import './overlay';
+
+

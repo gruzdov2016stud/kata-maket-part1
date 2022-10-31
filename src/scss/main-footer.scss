@@ -1,0 +1,46 @@
+.main-footer {
+  border-top: 1px solid $navMainBorderColor;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $sectionTextColor;
+  background-color: $backgroundColorMain;
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 32px 24px;
+
+    &__items {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__item {
+      text-align: left;
+      width: 25%;
+
+      &:nth-last-child(1) {
+        text-align: right;
+      }
+    }
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 32px;
+  }
+}
