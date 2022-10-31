@@ -21,18 +21,17 @@
   @media screen and (min-width: $screen-md) {
     &__desktop {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 280px);
+      grid-template-columns: repeat(auto-fill, 355px);
       justify-content: space-between;
       gap: 24px;
       padding: 24px;
       height: 185px;
-      width: auto;
       overflow: hidden;
       transition: all 0.5s ease;
     }
 
     &__desktop--show-more {
-      height: 620px;
+      height: 1060px;
       gap: -24px;
       overflow: hidden;
       transition: all 0.5s ease;
@@ -88,8 +87,14 @@
   }
   @media screen and (min-width: $screen-xxl) {
     &__desktop {
-      display: grid;
+      grid-template-columns: repeat(auto-fill, 355px);
       padding: 32px;
+    }
+    &__desktop--show-more {
+      height: 640px;
+      gap: -24px;
+      overflow: hidden;
+      transition: all 0.5s ease;
     }
   }
 

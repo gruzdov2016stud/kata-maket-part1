@@ -8,15 +8,13 @@
   <title><Ремонт техники></title>
 </head>
 <body>
-<!--<div class="navbar__blur">-->
-<!--</div>-->
 <div class="container-pages">
-  <aside class="navbar">
+  <aside class="navbar navbar__btn-close">
     <div class="navbar__container">
       <header class="navbar-header">
         <div class="navbar-header__container">
           <div class="navbar-header__item">
-            <button class="btn btn__burger-befor btn__burger-befor--hidden"></button>
+            <button class="btn btn__burger-befor btn__burger-befor--hidden navbar__burger-befor "></button>
           </div>
           <div class="navbar-header__item"><a href="#" class="navbar-header__logo"><img src="./img/logo.svg" alt="logo"></a>
           </div>
@@ -28,8 +26,7 @@
       <nav class="navbar-nav">
         <ul class="navbar-nav__list">
           <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Ремонт техники</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Услуги и
-            сервисы</a></li>
+          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link navbar-nav__link--active">Услуги и сервисы</a></li>
           <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Корпоративным клиентам</a></li>
           <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Продавцам техники</a></li>
           <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Партнерам</a></li>
@@ -66,14 +63,14 @@
     <header class="header">
       <div class="header__container">
         <div class="header__item">
-          <button class="btn btn__burger-after"></button>
+          <button class="btn btn__burger-after menu-open"></button>
         </div>
         <a href="#" class="header__item"><img src="./img/logo.svg" alt="logo"></a>
 
         <div class="header__item header__item--hidden action-btn--call">
           <button class="btn btn__call"></button>
         </div>
-        <div class="header__item header__item--hidden">
+        <div class="header__item header__item--hidden action-btn--chat">
           <button class="btn btn__message"></button>
         </div>
         <div class="header__item header__item--hidden">
@@ -313,9 +310,9 @@
     </footer>
     <aside class="modal-form modal-feedback">
       <div class="modal-form__container">
-        <button class="modal-form__close modal-form__close--feedback">
-          <img src="./img/burger-exit.svg" class="modal-form__btn" alt="Кнопка закрыть меню">
-        </button>
+        <div class="modal-form__close modal-form__close--feedback">
+          <button class="btn btn__burger-befor"></button>
+        </div>
         <h4 class="modal-feedback__title">
           Обратная связь
         </h4>
@@ -350,13 +347,11 @@
         <button type="submit" class="modal-form__submit modal-form__submit--feedback button">
           <span class="button__text">Отправить</span>
         </button>
-
       </div>
     </aside>
-
-    <aside class="modal-form modal-call">
+    <section class="modal-form modal-call">
       <div class="modal-form__container">
-        <div class="modal-form__close modal-form__close--feedback">
+        <div class="modal-form__close modal-form__close--call">
           <button class="btn btn__burger-befor"></button>
         </div>
         <h4 class="modal-call__title">
@@ -375,33 +370,9 @@
           <span class="button__text">Отправить</span>
         </button>
       </div>
-    </aside>
-  </section>
+    </section>
 
-  <section class="modal-form modal-call">
-    <div class="modal-form__container">
-      <div class="modal-form__close modal-form__close--call">
-        <button class="btn btn__burger-befor"></button>
-      </div>
-      <h4 class="modal-call__title">
-        Заказать звонок
-      </h4>
-      <form action="#" method="post" class="modal-call__forms">
-        <input type="tel" placeholder="Телефон" class="modal-call__input">
-      </form>
-      <p class="modal-form__approval">
-        Нажимая “отправить”, вы даете согласие на
-        <a href="#" class="modal-form__link">обработку персональных данных</a>
-        и соглашаетесь с нашей
-        <a href="#" class="modal-form__link">политикой конфиденциальности</a>
-      </p>
-      <button type="submit" class="modal-form__submit modal-form__submit--call button">
-        <span class="button__text">Отправить</span>
-      </button>
-    </div>
-  </section>
-
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 </div>
 </body>
 </html>

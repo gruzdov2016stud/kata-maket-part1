@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuOpen = document.querySelector('.menu-open');
-  const menu = document.querySelector('.modal-menu');
-  const menuClose = menu.querySelector('.modal-menu__btn-close');
+  const menu = document.querySelector('.navbar__btn-close');
+  const menuClose = document.querySelector('.navbar__burger-befor');
   const modalFeedback = document.querySelector('.modal-feedback');
   const modalCall = document.querySelector('.modal-call');
   const overlay = document.querySelector('.overlay');
 
 
   const openMenu = function () {
-    menu.classList.add('modal-menu--active');
+    menu.classList.toggle('navbar__btn-active');
     overlay.classList.add('overlay--active');
 
     if (modalFeedback.classList.contains('modal-feedback--active')) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const closeMenu = function () {
-    menu.classList.remove('modal-menu--active');
+    menu.classList.toggle('navbar__btn-active');
     overlay.classList.remove('overlay--active');
   };
 
@@ -30,16 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
   menuClose.addEventListener('click', closeMenu, false);
 
   overlay.addEventListener('click', closeMenu, false);
-
-
-  const modalNavItems = document.querySelectorAll('.modal-menu__nav-item');
-
-  modalNavItems.forEach(item => {
-    item.addEventListener('click', () => {
-      modalNavItems.forEach(element => {
-        element.classList.remove('modal-menu__nav-item--active');
-      });
-      item.classList.add('modal-menu__nav-item--active');
-    });
-  });
 });
