@@ -1,3 +1,5 @@
+[Макет модуля Web-core](https://gruzdov2016stud.github.io/module-study-part1/)
+
 # kata-maket-1
 
 ## kata-maket-1.3
