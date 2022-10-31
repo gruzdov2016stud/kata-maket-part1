@@ -1,3 +1,5 @@
+[Макет модуля Web-core](https://gruzdov2016stud.github.io/module-study-part1/)
+
 # Webpack Static Site Starter Kit
 
 ## Требования к проекту
