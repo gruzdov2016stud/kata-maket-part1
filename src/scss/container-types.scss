@@ -21,9 +21,9 @@
   @media screen and (min-width: $screen-md) {
     &__desktop {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 355px);
-      justify-content: space-between;
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, 305px);
+      justify-content: space-around;
+      row-gap: 20px;
       padding: 24px;
       height: 185px;
       overflow: hidden;
@@ -31,8 +31,7 @@
     }
 
     &__desktop--show-more {
-      height: 1060px;
-      gap: -24px;
+      height: 1055px;
       overflow: hidden;
       transition: all 0.5s ease;
     }
@@ -85,16 +84,19 @@
     }
 
   }
+  @media screen and (min-width: 950px) {
+    &__desktop {
+      grid-template-columns: repeat(auto-fill, 338px);
+      padding: 32px;
+    }
+    &__desktop--show-more {
+      height: 635px;
+    }
+  }
   @media screen and (min-width: $screen-xxl) {
     &__desktop {
       grid-template-columns: repeat(auto-fill, 355px);
       padding: 32px;
-    }
-    &__desktop--show-more {
-      height: 640px;
-      gap: -24px;
-      overflow: hidden;
-      transition: all 0.5s ease;
     }
   }
 

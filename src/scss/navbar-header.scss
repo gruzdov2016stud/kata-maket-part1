@@ -1,6 +1,5 @@
 .navbar-header {
   min-width: 320px;
-  background-color: $backgroundСolorBody;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -24,5 +23,11 @@
     height: 100%;
     margin-right: 16px;
     flex-grow: 1;
+  }
+  @media screen and (min-width: $screen-xl){
+    &__logo {
+      margin-right: 120px;
+    }
+
   }
 }

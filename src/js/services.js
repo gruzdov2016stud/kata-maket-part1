@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  const navItems = document.querySelectorAll('.main-nav__list');
+  const navItems = document.querySelectorAll('.navbar-nav__item');
 
   navItems.forEach(item => {
     item.addEventListener('click', () => {
       navItems.forEach(element => {
-        element.classList.remove('main-nav__item--active');
+        element.classList.remove('navbar-nav__item--active');
       });
-      item.classList.add('services__item--active');
+      // item.classList.add('navbar-nav__item--active');
     });
   });
+
 });

@@ -3,8 +3,10 @@ import Swiper, {
 } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
-if (innerWidth < 768) {
-  const swiper1 = new Swiper('.swiper1', {
+const mediaQueryList = window.matchMedia("(min-width: 768px)");
+
+if (!mediaQueryList.matches) {
+  const swiperBrands = new Swiper('.swiper__brands', {
 
     modules: [Pagination],
 
@@ -14,7 +16,7 @@ if (innerWidth < 768) {
     width: 240,
 
     pagination: {
-      el: '.swiper-pagination1',
+      el: '.swiper-pagination__brands',
       clickable: true,
     },
 
@@ -22,7 +24,7 @@ if (innerWidth < 768) {
   });
 
 
-  const swiper2 = new Swiper('.swiper2', {
+  const swiperTypes = new Swiper('.swiper__types', {
 
     modules: [Pagination],
 
@@ -32,14 +34,14 @@ if (innerWidth < 768) {
     width: 240,
 
     pagination: {
-      el: '.swiper-pagination2',
+      el: '.swiper-pagination__types',
       clickable: true,
     },
 
     init: true
   });
 
-  const swiper3 = new Swiper('.swiper3', {
+  const swiperPrice = new Swiper('.swiper__price', {
 
     modules: [Pagination],
 
@@ -49,7 +51,7 @@ if (innerWidth < 768) {
     width: 240,
 
     pagination: {
-      el: '.swiper-pagination3',
+      el: '.swiper-pagination__price',
       clickable: true,
     },
 

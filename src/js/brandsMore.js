@@ -2,7 +2,7 @@ const btn = document.querySelector('.container-brands__btn');
 const brandsContainer = document.querySelector('.container-brands__desktop');
 const btnShowMore = btn.querySelector('.container-brands__text-btn');
 
-const toggleShowMore = function () {
+const toggleShowMore = () => {
   brandsContainer.classList.toggle('container-brands__desktop--show-more');
   btnShowMore.classList.toggle('container-brands__text-btn--hide');
 

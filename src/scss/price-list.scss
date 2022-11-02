@@ -186,13 +186,12 @@
     &__items {
       flex-direction: column;
       align-items: stretch;
-      width: 1050px;
+      width: auto;
       border-radius: 6px;
       background-color: $TableColor;
       padding: 0 0;
       margin: 0;
       margin-bottom: 16px;
-      left: 32px;
     }
 
     &__item {
@@ -200,7 +199,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: 715px;
+      width: auto;
       height: 64px;
       margin: 0;
       padding: 16px 16px;
@@ -249,7 +248,18 @@
 
   @media screen and (min-width: $screen-xl) {
     &__item {
-      width: 1000px;
+      //width: 1000px;
+      width: auto;
+    }
+    &__table {
+      padding: 0 32px 32px;
+    }
+  }
+  @media screen and (min-width: $screen-xxl) {
+
+    &__item {
+      //width: 1070px;
+      width: auto;
     }
     &__table {
       padding: 0 32px 32px;

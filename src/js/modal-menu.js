@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuOpen = document.querySelector('.menu-open');
-  const menu = document.querySelector('.navbar__btn-close');
-  const menuClose = document.querySelector('.navbar__burger-befor');
+  const menuOpen = document.querySelector('.container-pages__navbar-open');
+  const menu = document.querySelector('.navbar');
+  const menuClose = document.querySelector('.navbar__close');
   const modalFeedback = document.querySelector('.modal-feedback');
   const modalCall = document.querySelector('.modal-call');
   const overlay = document.querySelector('.overlay');
 
 
-  const openMenu = function () {
-    menu.classList.toggle('navbar__btn-active');
+  const openMenu = () => {
+    menu.classList.add('navbar__btn--active');
     overlay.classList.add('overlay--active');
 
     if (modalFeedback.classList.contains('modal-feedback--active')) {
@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const closeMenu = function () {
-    menu.classList.toggle('navbar__btn-active');
+  const closeMenu = () => {
+    menu.classList.remove('navbar__btn--active');
     overlay.classList.remove('overlay--active');
   };
 
-  menuOpen.addEventListener('click', openMenu, false);
+  menuOpen.addEventListener('click', openMenu);
 
-  menuClose.addEventListener('click', closeMenu, false);
+  menuClose.addEventListener('click', closeMenu);
 
-  overlay.addEventListener('click', closeMenu, false);
+  overlay.addEventListener('click', closeMenu);
 });

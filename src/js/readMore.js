@@ -3,7 +3,7 @@ const btnShowMoreTxt = textMoreButton.querySelector('.main-container__btn-read-m
 
 const moreContainer = document.querySelector('.main-container__descriptions');
 
-const toggleShowMore = function () {
+const toggleShowMore = () => {
   moreContainer.classList.toggle('main-container__descriptions--hide');
   btnShowMoreTxt.classList.toggle('main-container__read-more-text-btn--hide');
 

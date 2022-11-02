@@ -8,62 +8,62 @@
   <title><Ремонт техники></title>
 </head>
 <body>
+<aside tabindex="-1" class="navbar">
+  <div class="navbar__container">
+    <header class="navbar-header">
+      <div class="navbar-header__container">
+        <div class="navbar-header__item">
+          <button class="btn btn__burger-befor btn__burger-befor--hidden navbar__close "></button>
+        </div>
+        <div class="navbar-header__item"><a href="#" class="navbar-header__logo"><img src="./img/logo.svg" alt="logo"></a>
+        </div>
+        <div class="navbar-header__item">
+          <button class="btn btn__search"></button>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar-nav">
+      <ul class="navbar-nav__list">
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Ремонт техники</a></li>
+        <li class="navbar-nav__item navbar-nav__item--active"><a href="#" class="navbar-nav__link">Услуги и сервисы</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Корпоративным клиентам</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Продавцам техники</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Партнерам</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Производителям</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Наши сервисные центры</a></li>
+        <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <footer class="navbar-footer">
+      <div class="navbar-footer__container">
+        <div class="navbar-footer__container-btn">
+          <div class="navbar-footer__btn-item action-btn--call">
+            <button class="btn btn__call"></button>
+          </div>
+          <div class="navbar-footer__btn-item action-btn--chat">
+            <button class="btn btn__message"></button>
+          </div>
+          <div class="navbar-footer__btn-item">
+            <button class="btn btn__profile"></button>
+          </div>
+        </div>
+        <a href="mailto:mail@cps.com" class="navbar-footer__mailto-link">mail@cps.com</a>
+        <a href="tel:+78008908900" class="navbar-footer__phone-link">8 800 890 89 00</a>
+        <div class="navbar-footer__container-langs">
+          <button class="navbar-footer__btn-lang navbar-footer__btn-lang--active">ru</button>
+          <button class="navbar-footer__btn-lang">en</button>
+          <button class="navbar-footer__btn-lang">ch</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</aside>
 <div class="container-pages">
-  <aside class="navbar navbar__btn-close">
-    <div class="navbar__container">
-      <header class="navbar-header">
-        <div class="navbar-header__container">
-          <div class="navbar-header__item">
-            <button class="btn btn__burger-befor btn__burger-befor--hidden navbar__burger-befor "></button>
-          </div>
-          <div class="navbar-header__item"><a href="#" class="navbar-header__logo"><img src="./img/logo.svg" alt="logo"></a>
-          </div>
-          <div class="navbar-header__item">
-            <button class="btn btn__search"></button>
-          </div>
-        </div>
-      </header>
-      <nav class="navbar-nav">
-        <ul class="navbar-nav__list">
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Ремонт техники</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link navbar-nav__link--active">Услуги и сервисы</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Корпоративным клиентам</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Продавцам техники</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Партнерам</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Производителям</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Наши сервисные центры</a></li>
-          <li class="navbar-nav__item"><a href="#" class="navbar-nav__link">Контакты</a></li>
-        </ul>
-      </nav>
-      <footer class="navbar-footer">
-        <div class="navbar-footer__container">
-          <div class="navbar-footer__container-btn">
-            <div class="navbar-footer__btn-item action-btn--call">
-              <button class="btn btn__call"></button>
-            </div>
-            <div class="navbar-footer__btn-item action-btn--chat">
-              <button class="btn btn__message"></button>
-            </div>
-            <div class="navbar-footer__btn-item">
-              <button class="btn btn__profile"></button>
-            </div>
-          </div>
-          <a href="mailto:mail@cps.com" class="navbar-footer__mailto-link">mail@cps.com</a>
-          <a href="tel:+78008908900" class="navbar-footer__phone-link">8 800 890 89 00</a>
-          <div class="navbar-footer__container-langs">
-            <button class="navbar-footer__btn-lang navbar-footer__btn-lang--active">ru</button>
-            <button class="navbar-footer__btn-lang">en</button>
-            <button class="navbar-footer__btn-lang">ch</button>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </aside>
   <section class="service-page">
     <header class="header">
       <div class="header__container">
         <div class="header__item">
-          <button class="btn btn__burger-after menu-open"></button>
+          <button class="btn btn__burger-after container-pages__navbar-open"></button>
         </div>
         <a href="#" class="header__item"><img src="./img/logo.svg" alt="logo"></a>
 
@@ -131,7 +131,7 @@
       <section class="container-brands">
         <h1 class="container-brands__headline section-headline">Ремонт техники различных брендов</h1>
 
-        <div class="brands swiper swiper1">
+        <div class="brands swiper swiper__brands">
           <div class="swiper-wrapper container-brands__desktop">
             <a class="swiper-brands swiper-slide">
               <img src="./img/logo__lenovo.svg" alt="Lenovo">
@@ -170,7 +170,7 @@
               <img src="./img/logo__sony.svg" alt="sony">
             </a>
           </div>
-          <div class="swiper-pagination1"></div>
+          <div class="pagination__brands"></div>
         </div>
         <button class="container-brands__btn">
           <div class="container-brands__text-btn">Показать всё</div>
@@ -180,7 +180,7 @@
       <section class="container-types">
         <h1 class="container-types__headline section-headline">Ремонт различных видов техники</h1>
 
-        <div class="types swiper swiper2">
+        <div class="types swiper swiper__types">
           <div class="swiper-wrapper container-types__desktop">
             <a class="swiper-type swiper-slide">
               <p class="container-types__header">Ремонт ноутбуков</p>
@@ -210,7 +210,7 @@
               <p class="container-types__header">Ремонт ноутбуков</p>
             </a>
           </div>
-          <div class="swiper-pagination2"></div>
+          <div class="swiper-pagination__types"></div>
         </div>
         <button class="container-types__btn">
           <div class="container-types__text-btn">Показать всё</div>
@@ -220,7 +220,7 @@
       <section class="container-price">
         <h1 class="container-types__headline section-headline">Цены на услуги</h1>
 
-        <ul class="price swiper swiper3">
+        <ul class="price swiper swiper__price">
           <li class="price-list__header">
             <ul class="price-list__header-row">
               <li>Ремонтные услуги</li>
@@ -282,9 +282,8 @@
             </dl>
 
           </li>
-          <li class="swiper-pagination3"></li>
+          <li class="swiper-pagination__price"></li>
         </ul>
-        <div class="swiper-pagination3"></div>
       </section>
 
       <div class="under-price">
@@ -308,71 +307,70 @@
         <li class="main-footer__item">Информация, размещенная на данной странице, не является публичной офертой</li>
       </ul>
     </footer>
-    <aside class="modal-form modal-feedback">
-      <div class="modal-form__container">
-        <div class="modal-form__close modal-form__close--feedback">
-          <button class="btn btn__burger-befor"></button>
-        </div>
-        <h4 class="modal-feedback__title">
-          Обратная связь
-        </h4>
-        <ul class="modal-feedback__items">
-          <li class="modal-feedback__item">
-            <form action="#" method="post" class="modal-feedback__forms">
-              <input type="name" placeholder="Имя" class="modal-feedback__input">
-            </form>
-          </li>
-          <li class="modal-feedback__item">
-            <form action="#" method="post" class="modal-feedback__forms">
-              <input type="tel" placeholder="Телефон" class="modal-feedback__input">
-            </form>
-          </li>
-          <li class="modal-feedback__item">
-            <form action="#" method="post" class="modal-feedback__forms">
-              <input type="email" placeholder="Электронная почта" class="modal-feedback__input">
-            </form>
-          </li>
-          <li class="modal-feedback__item">
-            <form action="#" method="post" class="modal-feedback__forms">
-              <textarea placeholder="Сообщение" class="modal-feedback__input modal-feedback__input--big"></textarea>
-            </form>
-          </li>
-        </ul>
-        <p class="modal-form__approval">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="modal-form__link">обработку персональных данных</a>
-          и соглашаетесь с нашей
-          <a href="#" class="modal-form__link">политикой конфиденциальности</a>
-        </p>
-        <button type="submit" class="modal-form__submit modal-form__submit--feedback button">
-          <span class="button__text">Отправить</span>
-        </button>
-      </div>
-    </aside>
-    <section class="modal-form modal-call">
-      <div class="modal-form__container">
-        <div class="modal-form__close modal-form__close--call">
-          <button class="btn btn__burger-befor"></button>
-        </div>
-        <h4 class="modal-call__title">
-          Заказать звонок
-        </h4>
-        <form action="#" method="post" class="modal-call__forms">
-          <input type="tel" placeholder="Телефон" class="modal-call__input">
-        </form>
-        <p class="modal-form__approval">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="modal-form__link">обработку персональных данных</a>
-          и соглашаетесь с нашей
-          <a href="#" class="modal-form__link">политикой конфиденциальности</a>
-        </p>
-        <button type="submit" class="modal-form__submit modal-form__submit--call button">
-          <span class="button__text">Отправить</span>
-        </button>
-      </div>
-    </section>
-
-    <div class="overlay"></div>
 </div>
+<aside class="modal-form modal-feedback">
+  <div class="modal-form__container">
+    <div class="modal-form__close modal-form__close--feedback">
+      <button class="btn btn__burger-befor"></button>
+    </div>
+    <h4 class="modal-feedback__title">
+      Обратная связь
+    </h4>
+    <ul class="modal-feedback__items">
+      <li class="modal-feedback__item">
+        <form tabindex="1" action="#" method="post" class="modal-feedback__forms">
+          <input type="name" placeholder="Имя" class="modal-feedback__input">
+        </form>
+      </li>
+      <li class="modal-feedback__item">
+        <form tabindex="2" action="#" method="post" class="modal-feedback__forms">
+          <input type="tel" placeholder="Телефон" class="modal-feedback__input">
+        </form>
+      </li>
+      <li class="modal-feedback__item">
+        <form tabindex="3" action="#" method="post" class="modal-feedback__forms">
+          <input type="email" placeholder="Электронная почта" class="modal-feedback__input">
+        </form>
+      </li>
+      <li class="modal-feedback__item">
+        <form tabindex="4" action="#" method="post" class="modal-feedback__forms">
+          <textarea placeholder="Сообщение" class="modal-feedback__input modal-feedback__input--big"></textarea>
+        </form>
+      </li>
+    </ul>
+    <p class="modal-form__approval">
+      Нажимая “отправить”, вы даете согласие на
+      <a href="#" class="modal-form__link">обработку персональных данных</a>
+      и соглашаетесь с нашей
+      <a href="#" class="modal-form__link">политикой конфиденциальности</a>
+    </p>
+    <button type="submit" class="modal-form__submit modal-form__submit--feedback button">
+      <span class="button__text">Отправить</span>
+    </button>
+  </div>
+</aside>
+<section class="modal-form modal-call">
+  <div class="modal-form__container">
+    <div class="modal-form__close modal-form__close--call">
+      <button class="btn btn__burger-befor"></button>
+    </div>
+    <h4 class="modal-call__title">
+      Заказать звонок
+    </h4>
+    <form tabindex="1" action="#" method="post" class="modal-call__forms">
+      <input type="tel" placeholder="Телефон" class="modal-call__input">
+    </form>
+    <p class="modal-form__approval">
+      Нажимая “отправить”, вы даете согласие на
+      <a href="#" class="modal-form__link">обработку персональных данных</a>
+      и соглашаетесь с нашей
+      <a href="#" class="modal-form__link">политикой конфиденциальности</a>
+    </p>
+    <button type="submit" class="modal-form__submit modal-form__submit--call button">
+      <span class="button__text">Отправить</span>
+    </button>
+  </div>
+</section>
+<div class="overlay"></div>
 </body>
 </html>

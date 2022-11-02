@@ -8,13 +8,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  //z-index: 1;
   @media screen and (max-width: $screen-xl){
-    transition: all 2s ease;
+    transition: all 1s ease;
     right: -320px;
   }
   @media screen and (max-width: $screen-xl){
-    transition: all 2s ease;
+    transition: all 1s ease;
     right: 0;
   }
 }
